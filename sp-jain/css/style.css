@@ -616,6 +616,7 @@ a {
     letter-spacing: .08em;
     text-transform: uppercase;
     color: #0A2E9A;
+    border: 1px solid #0A2E9A;
     transition: color .3s ease;
 }
 
@@ -626,6 +627,7 @@ a {
 .snapshot__tab.is-active {
     color: #fff;
     background: #0A2E9A;
+    border: 1px solid #0A2E9A;
 }
 
 .snapshot__tab:focus-visible {
