@@ -1,839 +1,978 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbiosis | Catalyst AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Symbiosis | Catalyst AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
-    rel="stylesheet" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS (always LAST) -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
 
-  <!-- Custom CSS (always LAST) -->
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/responsive.css" />
-</head>
-
-<body class="theme-symbiosis">
-  <div class="topbar text-center">
-    <div class="container">
-      <span class="topbar__dot d-inline-block rounded-circle me-2"></span>
-      Catalyst AI is an independent education consultancy. This is not the official website of any university.
-    </div>
-  </div>
-
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container d-flex align-items-center justify-content-between py-3">
-      <a href="#home" class="brand d-inline-flex align-items-center text-decoration-none"
-        aria-label="Symbiosis International University Dubai">
-        <img src="./images/Symbiosis_logo.webp" alt="Symbiosis logo" />
-      </a>
-
-      <div class="d-flex align-items-center header-end">
-        <a href="/" class="back-link d-none d-sm-inline-flex align-items-center gap-2 text-decoration-none">
-          <i class="fa-solid fa-arrow-left-long"></i> Back to main page
-        </a>
-        <a href="#contact" class="btn btn-brand btn-navy">Request a consultation</a>
+  <body class="theme-symbiosis">
+    <div class="topbar text-center">
+      <div class="container">
+        <span class="topbar__dot d-inline-block rounded-circle me-2"></span>
+        Catalyst AI is an independent education consultancy. This is not the official website of any university.
       </div>
     </div>
-  </header>
-  <!-- ============ HERO ============ -->
-  <main>
-    <section id="home" class="hero">
-      <!-- Left faded strip (desktop only) -->
-      <div class="hero__tint" aria-hidden="true" data-aos="fade" data-aos-duration="1200"></div>
 
-      <!-- Main content panel with BG image + gradient overlay + bottom wedge -->
-      <div class="hero__panel">
-        <div class="container px-0 px-md-auto">
-          <div class="hero__content d-flex justify-content-center flex-column position-relative" data-aos="fade-up"
-            data-aos-duration="800">
-            <span class="eyebrow align-items-center fw-bold text-uppercase" data-aos="fade-up" data-aos-duration="700">
-              Symbiosis International University · Dubai
-            </span>
+    <!-- ============ HEADER ============ -->
+    <header class="site-header">
+      <div class="container d-flex align-items-center justify-content-between py-3">
+        <a
+          href="#home"
+          class="brand d-inline-flex align-items-center text-decoration-none"
+          aria-label="Symbiosis International University Dubai"
+        >
+          <img src="./images/Symbiosis_logo.webp" alt="Symbiosis logo" />
+        </a>
 
-            <h1 class="hero__title mb-0 font-serif" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-              Symbiosis in Dubai:
-              <span class="text-brand-highlight">the university's first campus beyond India.</span>
-            </h1>
+        <div class="d-flex align-items-center header-end">
+          <a href="/" class="back-link d-none d-sm-inline-flex align-items-center gap-2 text-decoration-none">
+            <i class="fa-solid fa-arrow-left-long"></i> Back to main page
+          </a>
+          <a href="#contact" class="btn btn-brand btn-navy">Request a consultation</a>
+        </div>
+      </div>
+    </header>
+    <!-- ============ HERO ============ -->
+    <main>
+      <section id="home" class="hero">
+        <!-- Left faded strip (desktop only) -->
+        <div class="hero__tint" aria-hidden="true" data-aos="fade" data-aos-duration="1200"></div>
 
-            <p class="hero__text mb-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-              From a BBA with a UK dual-degree option to B.Tech and Psychology: what is on offer, what to verify and
-              who it suits.
-            </p>
+        <!-- Main content panel with BG image + gradient overlay + bottom wedge -->
+        <div class="hero__panel">
+          <div class="container px-0 px-md-auto">
+            <div
+              class="hero__content d-flex justify-content-center flex-column position-relative"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <span
+                class="eyebrow align-items-center fw-bold text-uppercase"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
+                Symbiosis International University · Dubai
+              </span>
 
-            <div class="hero__actions d-flex flex-wrap gap-3 mb-0" data-aos="fade-up" data-aos-delay="300"
-              data-aos-duration="800">
-              <a href="#programmes" class="btn btn-brand btn-accent rounded-12px">Explore programmes</a>
-              <a href="#contact" class="btn btn-brand btn-outline-light rounded-12px">Request a consultation</a>
+              <h1 class="hero__title mb-0 font-serif" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                Symbiosis in Dubai:
+                <span class="text-brand-highlight">the university's first campus beyond India.</span>
+              </h1>
+
+              <p class="hero__text mb-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                From a BBA with a UK dual-degree option to B.Tech and Psychology: what is on offer, what to verify and
+                who it suits.
+              </p>
+
+              <div
+                class="hero__actions d-flex flex-wrap gap-3 mb-0"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="800"
+              >
+                <a href="#programmes" class="btn btn-brand btn-accent rounded-12px">Explore programmes</a>
+                <a href="#contact" class="btn btn-brand btn-outline-light rounded-12px">Request a consultation</a>
+              </div>
+              <span
+                class="hero__wedge"
+                aria-hidden="true"
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-aos-duration="700"
+              ></span>
             </div>
-            <span class="hero__wedge" aria-hidden="true" data-aos="fade-up" data-aos-delay="250"
-              data-aos-duration="700"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ============ CONSULTATION / CONTACT SECTION ============ -->
+    <section id="contact" class="consult-section bg-white">
+      <div class="container">
+        <div class="consult-card" data-aos="fade-up" data-aos-duration="850">
+          <div class="row g-0 align-items-stretch">
+            <!-- Left Dark / Theme Info Column -->
+            <div
+              class="col-lg-5 consult-card__left d-flex flex-column justify-content-start gap-3"
+              data-aos="fade-right"
+              data-aos-delay="150"
+              data-aos-duration="800"
+            >
+              <span class="consult-card__eyebrow d-inline-flex align-items-center fw-bold text-uppercase">
+                TALK TO A COUNSELLOR
+              </span>
+
+              <h2 class="consult-card__title text-white font-serif mb-0">
+                Share your Grade 12 or graduation details.
+                <span>We'll recommend the course to look at first.</span>
+              </h2>
+            </div>
+
+            <!-- Right White Form Card -->
+            <div class="col-lg-7">
+              <div class="consult-card__form-wrap" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                <form id="consultationForm" class="consult-form" novalidate>
+                  <!-- Target Google Sheet Tab Name (Change per page: Symboisi / Page2Tab / Page3Tab) -->
+                  <input type="hidden" name="sheetTab" value="Symboisi" />
+
+                  <div class="row g-3">
+                    <!-- Full Name -->
+                    <div class="col-12">
+                      <label for="fullName" class="form-label consult-label">Full name</label>
+                      <input
+                        type="text"
+                        class="form-control consult-input"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Your full name"
+                        required
+                      />
+                    </div>
+
+                    <!-- Mobile / WhatsApp -->
+                    <div class="col-12">
+                      <label for="mobileNumber" class="form-label consult-label">Mobile / WhatsApp</label>
+                      <input
+                        type="tel"
+                        class="form-control consult-input"
+                        id="mobileNumber"
+                        name="mobileNumber"
+                        placeholder="+91"
+                        required
+                      />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                      <label for="emailAddress" class="form-label consult-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control consult-input"
+                        id="emailAddress"
+                        name="emailAddress"
+                        placeholder="you@example.com"
+                        required
+                      />
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-12">
+                      <label for="cityName" class="form-label consult-label">City</label>
+                      <input
+                        type="text"
+                        class="form-control consult-input"
+                        id="cityName"
+                        name="cityName"
+                        placeholder="Your city"
+                        required
+                      />
+                    </div>
+
+                    <!-- Consent Checkbox -->
+                    <div class="col-12">
+                      <div class="form-check consult-check">
+                        <input class="form-check-input" type="checkbox" id="consentCheck" name="consent" required />
+                        <label class="form-check-label" for="consentCheck">
+                          I authorize CatalystAI and its representatives to contact me with updates and notifications
+                          via Email/SMS/WhatsApp/Call.
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12">
+                      <button
+                        type="submit"
+                        id="consultSubmitBtn"
+                        class="btn consult-submit w-100 d-flex align-items-center justify-content-between"
+                      >
+                        <span class="consult-submit__text">Request a consultation</span>
+                        <span class="consult-submit__icon d-inline-flex align-items-center justify-content-center">
+                          <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                      </button>
+                    </div>
+
+                    <!-- Status Alert & Legal Note -->
+                    <div class="col-12">
+                      <div id="formStatusMsg" class="consult-status d-none" role="alert"></div>
+                      <p class="consult-note mb-0">
+                        By submitting, you agree to our <a href="#privacy-policy">Privacy Policy</a>
+                        and
+                        <a href="#terms-of-use">Terms &amp; Conditions</a>.
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  </main>
-  <!-- ============ CONSULTATION / CONTACT SECTION ============ -->
-  <section id="contact" class="consult-section bg-white">
-    <div class="container">
-      <div class="consult-card" data-aos="fade-up" data-aos-duration="850">
-        <div class="row g-0 align-items-stretch">
-          <!-- Left Dark / Theme Info Column -->
-          <div class="col-lg-5 consult-card__left d-flex flex-column justify-content-start gap-3" data-aos="fade-right"
-            data-aos-delay="150" data-aos-duration="800">
-            <span class="consult-card__eyebrow d-inline-flex align-items-center fw-bold text-uppercase">
-              TALK TO A COUNSELLOR
-            </span>
-
-            <h2 class="consult-card__title text-white font-serif mb-0">
-              Share your Grade 12 or graduation details.
-              <span>We'll recommend the course to look at first.</span>
-            </h2>
+    <!-- ============ CAMPUS SNAPSHOT ============ -->
+    <section id="snapshot" class="snapshot" data-snapshot aria-labelledby="snapshot-title">
+      <div class="container custom-container px-gutter">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="d-flex flex-column gap-3 gap-md-4">
+              <span class="snapshot__eyebrow fw-bold text-uppercase">Symbiosis Dubai</span>
+              <h2 id="snapshot-title" class="snapshot__title font-serif">
+                Campus <span class="text-brand-red">snapshot</span>
+              </h2>
+              <a href="#contact" class="btn btn-brand btn-navy btn-caps">Request a consultation</a>
+            </div>
           </div>
 
-          <!-- Right White Form Card -->
-          <div class="col-lg-7">
-            <div class="consult-card__form-wrap" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-              <form id="consultationForm" class="consult-form" novalidate>
-                <!-- Target Google Sheet Tab Name (Change per page: Symboisi / Page2Tab / Page3Tab) -->
-                <input type="hidden" name="sheetTab" value="Symboisi" />
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
+            <p class="snapshot__lead">
+              Symbiosis International (Deemed University), Pune, founded in 1971, with students from more than 85
+              countries. SIU lists partner universities that include Aston (UK), Cologne, Hamburg, Galway, RUDN and
+              National Taiwan Normal University.
+            </p>
 
-                <div class="row g-3">
-                  <!-- Full Name -->
-                  <div class="col-12">
-                    <label for="fullName" class="form-label consult-label">Full name</label>
-                    <input type="text" class="form-control consult-input" id="fullName" name="fullName"
-                      placeholder="Your full name" required />
+            <div class="snapshot__tabs" role="tablist" aria-label="Campus snapshot" data-active="0">
+              <span class="snapshot__indicator" aria-hidden="true"></span>
+              <button
+                class="snapshot__tab is-active"
+                type="button"
+                role="tab"
+                id="snap-tab-0"
+                aria-controls="snap-panel-0"
+                aria-selected="true"
+              >
+                Parent
+              </button>
+              <button
+                class="snapshot__tab"
+                type="button"
+                role="tab"
+                id="snap-tab-1"
+                aria-controls="snap-panel-1"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Dubai campus
+              </button>
+              <button
+                class="snapshot__tab"
+                type="button"
+                role="tab"
+                id="snap-tab-2"
+                aria-controls="snap-panel-2"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                Regulation
+              </button>
+            </div>
+
+            <div class="snapshot__panels">
+              <!-- Tab 1: PARENT (default) -->
+              <div class="snapshot__panel is-active" role="tabpanel" id="snap-panel-0" aria-labelledby="snap-tab-0">
+                <div class="row row-cols-1 row-cols-sm-3 g-4 text-center">
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">1971</p>
+                    <p class="snapshot__label">Symbiosis International (Deemed University), Pune, founded</p>
                   </div>
-
-                  <!-- Mobile / WhatsApp -->
-                  <div class="col-12">
-                    <label for="mobileNumber" class="form-label consult-label">Mobile / WhatsApp</label>
-                    <input type="tel" class="form-control consult-input" id="mobileNumber" name="mobileNumber"
-                      placeholder="+91" required />
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">85+</p>
+                    <p class="snapshot__label">countries students come from</p>
                   </div>
-
-                  <!-- Email -->
-                  <div class="col-12">
-                    <label for="emailAddress" class="form-label consult-label">Email</label>
-                    <input type="email" class="form-control consult-input" id="emailAddress" name="emailAddress"
-                      placeholder="you@example.com" required />
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">6</p>
+                    <p class="snapshot__label">partner universities listed, including Aston (UK)</p>
                   </div>
+                </div>
+              </div>
 
-                  <!-- City -->
-                  <div class="col-12">
-                    <label for="cityName" class="form-label consult-label">City</label>
-                    <input type="text" class="form-control consult-input" id="cityName" name="cityName"
-                      placeholder="Your city" required />
+              <!-- Tab 2: DUBAI CAMPUS (replace with your verified data) -->
+              <div class="snapshot__panel" role="tabpanel" id="snap-panel-1" aria-labelledby="snap-tab-1">
+                <div class="row row-cols-1 row-cols-sm-3 g-4 text-center">
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">Sept 2024</p>
+                    <p class="snapshot__label">classes began</p>
                   </div>
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">14 Nov 2024</p>
+                    <p class="snapshot__label">formally inaugurated</p>
+                  </div>
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">Dubai Knowledge Park</p>
+                    <p class="snapshot__label">reported location</p>
+                  </div>
+                </div>
+              </div>
 
-                  <!-- Consent Checkbox -->
-                  <div class="col-12">
-                    <div class="form-check consult-check">
-                      <input class="form-check-input" type="checkbox" id="consentCheck" name="consent" required />
-                      <label class="form-check-label" for="consentCheck">
-                        I authorize CatalystAI and its representatives to contact me with updates and notifications
-                        via Email/SMS/WhatsApp/Call.
-                      </label>
+              <!-- Tab 3: REGULATION (replace with your verified data) -->
+              <div class="snapshot__panel" role="tabpanel" id="snap-panel-2" aria-labelledby="snap-tab-2">
+                <div class="row row-cols-1 row-cols-sm-3 g-4 text-center">
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">UAE</p>
+                    <p class="snapshot__label">licensed by the Ministry of Education</p>
+                  </div>
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">KHDA</p>
+                    <p class="snapshot__label">licensed by the Knowledge and Human Development Authority</p>
+                  </div>
+                  <div class="col snapshot__stat">
+                    <p class="snapshot__num fw-bold">CAA</p>
+                    <p class="snapshot__label">programmes accredited by the Commission for Academic Accreditation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="programmes" class="programmes" data-programmes aria-labelledby="programmes-title">
+      <div class="container custom-container px-gutter">
+        <div class="programmes__inner mx-auto">
+          <!-- Heading -->
+          <header class="text-center" data-aos="fade-up">
+            <span class="eyebrow justify-content-center text-uppercase fw-bold">Symbiosis Dubai</span>
+            <h2 id="programmes-title" class="programmes__title font-serif">Programmes</h2>
+          </header>
+
+          <!-- Counter + arrows -->
+          <div
+            class="programmes__nav d-flex align-items-center justify-content-between justify-content-md-end gap-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <p class="programmes__count mb-0" aria-live="polite"><span data-prog-range>1 – 3</span> of 8 programmes</p>
+            <div class="d-flex gap-2">
+              <button class="prog-arrow prog-arrow--prev" type="button" aria-label="Previous programmes">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="prog-arrow prog-arrow--next" type="button" aria-label="Next programmes">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel -->
+          <div class="swiper programmes__swiper" data-aos="fade-up" data-aos-delay="150">
+            <div class="swiper-wrapper">
+              <!-- 1. MBA -->
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Postgraduate</p>
+                  <h3 class="prog-card__title">MBA</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>2 years (4 semesters), 45 credits; day, evening or weekend batches</dd>
                     </div>
-                  </div>
-
-                  <!-- Submit Button -->
-                  <div class="col-12">
-                    <button type="submit" id="consultSubmitBtn"
-                      class="btn consult-submit w-100 d-flex align-items-center justify-content-between">
-                      <span class="consult-submit__text">Request a consultation</span>
-                      <span class="consult-submit__icon d-inline-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </span>
-                    </button>
-                  </div>
-
-                  <!-- Status Alert & Legal Note -->
-                  <div class="col-12">
-                    <div id="formStatusMsg" class="consult-status d-none" role="alert"></div>
-                    <p class="consult-note mb-0">
-                      By submitting, you agree to our <a href="#privacy-policy">Privacy Policy</a>
-                      and
-                      <a href="#terms-of-use">Terms &amp; Conditions</a>.
-                    </p>
-                  </div>
+                    <div>
+                      <dt>Specialisations</dt>
+                      <dd>
+                        Marketing, Finance, International Business, Business Analytics, Operations, Strategy Management
+                        &amp; Leadership, Innovation &amp; Entrepreneurship
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>Bachelor's degree with at least 50% aggregate</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
                 </div>
-              </form>
+              </article>
+
+              <!-- 2. BBA (Honours) -->
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Undergraduate</p>
+                  <h3 class="prog-card__title">BBA (Honours)</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>4 years (8 semesters), 149 credits; exit option after 3 years</dd>
+                    </div>
+                    <div>
+                      <dt>Specialisations</dt>
+                      <dd>
+                        AI &amp; Business Analytics, Marketing, Logistics &amp; Supply Chain, Human Resource Management,
+                        Finance
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>10+2 or 10+3 diploma, any discipline</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
+
+              <!-- 3. BBA dual degree -->
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Undergraduate</p>
+                  <h3 class="prog-card__title">BBA dual degree</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>4 years (8 semesters), 120 credits</dd>
+                    </div>
+                    <div>
+                      <dt>Specialisations</dt>
+                      <dd>BBA from SIU Dubai plus BSc from Aston University, UK</dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>10+2 from a recognised board, any discipline</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
+
+              <!-- 4 to 8: PLACEHOLDERS - replace with verified programme data -->
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Undergraduate</p>
+                  <h3 class="prog-card__title">B.Com (Honours) + ACCA</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>4 years (8 semesters), 146 credits; exit option after 3 years</dd>
+                    </div>
+                    <div>
+                      <dt>Specialisations</dt>
+                      <dd>ACCA pathway</dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>10+2 from a recognised board, any discipline</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Undergraduate</p>
+                  <h3 class="prog-card__title">BA Media & Communication (Honours)</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>4 years (8 semesters), 146 credits; exit option after 3 years</dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>10+2 from a recognised board, any discipline</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Undergraduate</p>
+                  <h3 class="prog-card__title">B.Sc Psychology (Honours)</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>4 years (8 semesters), 146 credits; exit option after 3 years</dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>10+2 from a recognised board, any discipline</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Undergraduate</p>
+                  <h3 class="prog-card__title">B.Tech Computer Engineering</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>4 years (8 semesters), 153 credits; internship included</dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>10+2 from a recognised board (confirm subject requirement)</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="prog-card">
+                  <p class="prog-card__level">Online</p>
+                  <h3 class="prog-card__title">MA in English</h3>
+                  <dl class="prog-card__specs">
+                    <div>
+                      <dt>Duration and credits</dt>
+                      <dd>Confirm duration with the university</dd>
+                    </div>
+                    <div>
+                      <dt>Specialisations</dt>
+                      <dd>3 specialisations</dd>
+                    </div>
+                    <div>
+                      <dt>Entry requirement</dt>
+                      <dd>3-year bachelor's degree, any discipline</dd>
+                    </div>
+                  </dl>
+                  <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
+                </div>
+              </article>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ============ CAMPUS SNAPSHOT ============ -->
-  <section id="snapshot" class="snapshot" data-snapshot aria-labelledby="snapshot-title">
-    <div class="container custom-container px-gutter">
-      <div class="row g-4 g-lg-5 align-items-start">
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="d-flex flex-column gap-3 gap-md-4">
-            <span class="snapshot__eyebrow fw-bold text-uppercase">Symbiosis Dubai</span>
-            <h2 id="snapshot-title" class="snapshot__title font-serif">
-              Campus <span class="text-brand-red">snapshot</span>
-            </h2>
-            <a href="#contact" class="btn btn-brand btn-navy btn-caps">Request a consultation</a>
-          </div>
-        </div>
 
-        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
-          <p class="snapshot__lead">
-            Symbiosis International (Deemed University), Pune, founded in 1971, with students from more than 85
-            countries. SIU lists partner universities that include Aston (UK), Cologne, Hamburg, Galway, RUDN and
-            National Taiwan Normal University.
-          </p>
-
-          <div class="snapshot__tabs" role="tablist" aria-label="Campus snapshot" data-active="0">
-            <span class="snapshot__indicator" aria-hidden="true"></span>
-            <button class="snapshot__tab is-active" type="button" role="tab" id="snap-tab-0"
-              aria-controls="snap-panel-0" aria-selected="true">
-              Parent
-            </button>
-            <button class="snapshot__tab" type="button" role="tab" id="snap-tab-1" aria-controls="snap-panel-1"
-              aria-selected="false" tabindex="-1">
-              Dubai campus
-            </button>
-            <button class="snapshot__tab" type="button" role="tab" id="snap-tab-2" aria-controls="snap-panel-2"
-              aria-selected="false" tabindex="-1">
-              Regulation
-            </button>
-          </div>
-
-          <div class="snapshot__panels">
-            <!-- Tab 1: PARENT (default) -->
-            <div class="snapshot__panel is-active" role="tabpanel" id="snap-panel-0" aria-labelledby="snap-tab-0">
-              <div class="row row-cols-1 row-cols-sm-3 g-4 text-center">
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">1971</p>
-                  <p class="snapshot__label">Symbiosis International (Deemed University), Pune, founded</p>
-                </div>
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">85+</p>
-                  <p class="snapshot__label">countries students come from</p>
-                </div>
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">6</p>
-                  <p class="snapshot__label">partner universities listed, including Aston (UK)</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 2: DUBAI CAMPUS (replace with your verified data) -->
-            <div class="snapshot__panel" role="tabpanel" id="snap-panel-1" aria-labelledby="snap-tab-1">
-              <div class="row row-cols-1 row-cols-sm-3 g-4 text-center">
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">Sept 2024</p>
-                  <p class="snapshot__label">classes began</p>
-                </div>
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">14 Nov 2024</p>
-                  <p class="snapshot__label">formally inaugurated</p>
-                </div>
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">Dubai Knowledge Park</p>
-                  <p class="snapshot__label">reported location</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tab 3: REGULATION (replace with your verified data) -->
-            <div class="snapshot__panel" role="tabpanel" id="snap-panel-2" aria-labelledby="snap-tab-2">
-              <div class="row row-cols-1 row-cols-sm-3 g-4 text-center">
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">UAE</p>
-                  <p class="snapshot__label">licensed by the Ministry of Education</p>
-                </div>
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">KHDA</p>
-                  <p class="snapshot__label">licensed by the Knowledge and Human Development Authority</p>
-                </div>
-                <div class="col snapshot__stat">
-                  <p class="snapshot__num fw-bold">CAA</p>
-                  <p class="snapshot__label">programmes accredited by the Commission for Academic Accreditation</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="programmes" class="programmes" data-programmes aria-labelledby="programmes-title">
-    <div class="container custom-container px-gutter">
-      <div class="programmes__inner mx-auto">
-        <!-- Heading -->
-        <header class="text-center" data-aos="fade-up">
-          <span class="eyebrow justify-content-center text-uppercase fw-bold">Symbiosis Dubai</span>
-          <h2 id="programmes-title" class="programmes__title font-serif">Programmes</h2>
-        </header>
-
-        <!-- Counter + arrows -->
-        <div class="programmes__nav d-flex align-items-center justify-content-between justify-content-md-end gap-3"
-          data-aos="fade-up" data-aos-delay="100">
-          <p class="programmes__count mb-0" aria-live="polite"><span data-prog-range>1 – 3</span> of 8 programmes</p>
-          <div class="d-flex gap-2">
-            <button class="prog-arrow prog-arrow--prev" type="button" aria-label="Previous programmes">
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button class="prog-arrow prog-arrow--next" type="button" aria-label="Next programmes">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Carousel -->
-        <div class="swiper programmes__swiper" data-aos="fade-up" data-aos-delay="150">
-          <div class="swiper-wrapper">
-            <!-- 1. MBA -->
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Postgraduate</p>
-                <h3 class="prog-card__title">MBA</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>2 years (4 semesters), 45 credits; day, evening or weekend batches</dd>
-                  </div>
-                  <div>
-                    <dt>Specialisations</dt>
-                    <dd>
-                      Marketing, Finance, International Business, Business Analytics, Operations, Strategy Management
-                      &amp; Leadership, Innovation &amp; Entrepreneurship
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>Bachelor's degree with at least 50% aggregate</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <!-- 2. BBA (Honours) -->
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Undergraduate</p>
-                <h3 class="prog-card__title">BBA (Honours)</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>4 years (8 semesters), 149 credits; exit option after 3 years</dd>
-                  </div>
-                  <div>
-                    <dt>Specialisations</dt>
-                    <dd>
-                      AI &amp; Business Analytics, Marketing, Logistics &amp; Supply Chain, Human Resource Management,
-                      Finance
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>10+2 or 10+3 diploma, any discipline</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <!-- 3. BBA dual degree -->
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Undergraduate</p>
-                <h3 class="prog-card__title">BBA dual degree</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>4 years (8 semesters), 120 credits</dd>
-                  </div>
-                  <div>
-                    <dt>Specialisations</dt>
-                    <dd>BBA from SIU Dubai plus BSc from Aston University, UK</dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>10+2 from a recognised board, any discipline</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <!-- 4 to 8: PLACEHOLDERS - replace with verified programme data -->
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Undergraduate</p>
-                <h3 class="prog-card__title">B.Com (Honours) + ACCA</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>4 years (8 semesters), 146 credits; exit option after 3 years</dd>
-                  </div>
-                  <div>
-                    <dt>Specialisations</dt>
-                    <dd>ACCA pathway</dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>10+2 from a recognised board, any discipline</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Undergraduate</p>
-                <h3 class="prog-card__title">BA Media & Communication (Honours)</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>4 years (8 semesters), 146 credits; exit option after 3 years</dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>10+2 from a recognised board, any discipline</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Undergraduate</p>
-                <h3 class="prog-card__title">B.Sc Psychology (Honours)</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>4 years (8 semesters), 146 credits; exit option after 3 years</dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>10+2 from a recognised board, any discipline</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Undergraduate</p>
-                <h3 class="prog-card__title">B.Tech Computer Engineering</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>4 years (8 semesters), 153 credits; internship included</dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>10+2 from a recognised board (confirm subject requirement)</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="prog-card">
-                <p class="prog-card__level">Online</p>
-                <h3 class="prog-card__title">MA in English</h3>
-                <dl class="prog-card__specs">
-                  <div>
-                    <dt>Duration and credits</dt>
-                    <dd>Confirm duration with the university</dd>
-                  </div>
-                  <div>
-                    <dt>Specialisations</dt>
-                    <dd>3 specialisations</dd>
-                  </div>
-                  <div>
-                    <dt>Entry requirement</dt>
-                    <dd>3-year bachelor's degree, any discipline</dd>
-                  </div>
-                </dl>
-                <a href="#contact" class="btn btn-pill w-100">Request a consultation</a>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Notice -->
-        <div class="programmes__notice d-flex align-items-center gap-3" role="note" data-aos="fade-up">
-          <img src="./images/Icon.webp" height="46px" width="46px" alt="" />
-          <p class="mb-0">
-            Programme details as listed for the 2026–27 intake. Confirm current availability, delivery mode and fees
-            on siu-dubai.ac.ae before you apply.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ============ HOW ADMISSION WORKS ============ -->
-  <section id="admission" class="admission" data-admission aria-labelledby="admission-title">
-    <div class="container custom-container px-gutter">
-      <div class="admission__inner mx-auto">
-        <!-- Heading + arrows -->
-        <div class="d-flex align-items-start justify-content-between gap-3" data-aos="fade-up">
-          <h2 id="admission-title" class="admission__title font-serif">
-            How <span class="d-block">admission works</span>
-          </h2>
-          <div class="d-flex gap-2">
-            <button class="step-arrow" type="button" data-adm-prev aria-label="Previous step">
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button class="step-arrow" type="button" data-adm-next aria-label="Next step">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Cards -->
-        <div class="swiper admission__swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <article class="swiper-slide is-active">
-              <div class="step-card">
-                <h3 class="step-card__title">Programme registration.</h3>
-                <p class="step-card__text">
-                  Enter your personal, education and work details and pay the application fee.
-                </p>
-                <span class="step-card__num">01</span>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="step-card">
-                <h3 class="step-card__title">Fee payment.</h3>
-                <p class="step-card__text">
-                  Pay the admission fee for the first semester or year, or for the full programme.
-                </p>
-                <span class="step-card__num">02</span>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="step-card">
-                <h3 class="step-card__title">Document upload.</h3>
-                <p class="step-card__text">Upload your supporting documents and submit your application.</p>
-                <span class="step-card__num">03</span>
-              </div>
-            </article>
-
-            <article class="swiper-slide">
-              <div class="step-card">
-                <h3 class="step-card__title">University approval.</h3>
-                <p class="step-card__text">SIU evaluates your documents and confirms admission.</p>
-                <span class="step-card__num">04</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Pagination (centered) -->
-        <div class="admission__pager d-flex justify-content-center gap-3" role="group" aria-label="Admission steps"
-          data-aos="fade-up">
-          <button class="step-dot is-active" type="button" data-adm-dot aria-label="Go to step 1" aria-current="step">
-            01
-          </button>
-          <button class="step-dot" type="button" data-adm-dot aria-label="Go to step 2">02</button>
-          <button class="step-dot" type="button" data-adm-dot aria-label="Go to step 3">03</button>
-          <button class="step-dot" type="button" data-adm-dot aria-label="Go to step 4">04</button>
-        </div>
-
-        <p class="admission__note mb-0" data-aos="fade-up">
-          Because fees are paid before the university confirms admission, we help you ask, in writing, what is
-          refundable if admission is not confirmed.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHY STUDENTS SHORTLIST THIS CAMPUS ============ -->
-  <section id="why-campus" class="why" aria-labelledby="why-title">
-    <div class="container custom-container px-gutter">
-      <div class="why__inner">
-        <div class="row g-5 align-items-center">
-          <!-- 1. Text -->
-          <div class="col-md-6">
-            <span class="eyebrow text-uppercase fw-bold mb-2" data-aos="fade-up">Symbiosis Dubai</span>
-
-            <h2 id="why-title" class="why__title font-serif" data-aos="fade-up" data-aos-delay="100">
-              <span class="d-block">Why students shortlist</span>
-              <span class="d-block text-brand-red">this campus</span>
-            </h2>
-
-            <h3 class="why__subtitle font-serif fw-bold" data-aos="fade-up" data-aos-delay="200">
-              Fees and scholarships
-            </h3>
-
-            <p class="why__text mb-0" data-aos="fade-up" data-aos-delay="300">
-              Fees and scholarship criteria are set by the university and change by year. We share the current
-              official figures on your call, and tell you what the university currently publishes about scholarships.
-              We cannot promise one.
+          <!-- Notice -->
+          <div class="programmes__notice d-flex align-items-center gap-3" role="note" data-aos="fade-up">
+            <img src="./images/Icon.webp" height="46px" width="46px" alt="" />
+            <p class="mb-0">
+              Programme details as listed for the 2026–27 intake. Confirm current availability, delivery mode and fees
+              on siu-dubai.ac.ae before you apply.
             </p>
           </div>
-          <!-- 3. Diagram as an image (replace src, width and height with your file's real values) -->
-          <div class="col-12 col-md-6">
-            <img class="why__diagram img-fluid d-block mx-auto" src="./images/Diagram.webp"
-              alt="SIU Dubai at the centre. One city, many courses: business, computing, engineering, psychology and media sit under one roof. Recognition in the UAE: the university says CAA-accredited degrees are recognised by public and private employers in the UAE. Professional add-ons: B.Com options include ACCA preparation, and the BBA has a dual-degree route with a UK university."
-              width="760" height="540" loading="lazy" data-aos="zoom-in" data-aos-delay="100" />
+        </div>
+      </div>
+    </section>
+    <!-- ============ HOW ADMISSION WORKS ============ -->
+    <section id="admission" class="admission" data-admission aria-labelledby="admission-title">
+      <div class="container custom-container px-gutter">
+        <div class="admission__inner mx-auto">
+          <!-- Heading + arrows -->
+          <div class="d-flex align-items-start justify-content-between gap-3" data-aos="fade-up">
+            <h2 id="admission-title" class="admission__title font-serif">
+              How <span class="d-block">admission works</span>
+            </h2>
+            <div class="d-flex gap-2">
+              <button class="step-arrow" type="button" data-adm-prev aria-label="Previous step">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="step-arrow" type="button" data-adm-next aria-label="Next step">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="swiper admission__swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide is-active">
+                <div class="step-card">
+                  <h3 class="step-card__title">Programme registration.</h3>
+                  <p class="step-card__text">
+                    Enter your personal, education and work details and pay the application fee.
+                  </p>
+                  <span class="step-card__num">01</span>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="step-card">
+                  <h3 class="step-card__title">Fee payment.</h3>
+                  <p class="step-card__text">
+                    Pay the admission fee for the first semester or year, or for the full programme.
+                  </p>
+                  <span class="step-card__num">02</span>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="step-card">
+                  <h3 class="step-card__title">Document upload.</h3>
+                  <p class="step-card__text">Upload your supporting documents and submit your application.</p>
+                  <span class="step-card__num">03</span>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="step-card">
+                  <h3 class="step-card__title">University approval.</h3>
+                  <p class="step-card__text">SIU evaluates your documents and confirms admission.</p>
+                  <span class="step-card__num">04</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination (centered) -->
+          <div
+            class="admission__pager d-flex justify-content-center gap-3"
+            role="group"
+            aria-label="Admission steps"
+            data-aos="fade-up"
+          >
+            <button class="step-dot is-active" type="button" data-adm-dot aria-label="Go to step 1" aria-current="step">
+              01
+            </button>
+            <button class="step-dot" type="button" data-adm-dot aria-label="Go to step 2">02</button>
+            <button class="step-dot" type="button" data-adm-dot aria-label="Go to step 3">03</button>
+            <button class="step-dot" type="button" data-adm-dot aria-label="Go to step 4">04</button>
+          </div>
+
+          <p class="admission__note mb-0" data-aos="fade-up">
+            Because fees are paid before the university confirms admission, we help you ask, in writing, what is
+            refundable if admission is not confirmed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY STUDENTS SHORTLIST THIS CAMPUS ============ -->
+    <section id="why-campus" class="why" aria-labelledby="why-title">
+      <div class="container custom-container px-gutter">
+        <div class="why__inner">
+          <div class="row g-5 align-items-center">
+            <!-- 1. Text -->
+            <div class="col-md-6">
+              <span class="eyebrow text-uppercase fw-bold mb-2" data-aos="fade-up">Symbiosis Dubai</span>
+
+              <h2 id="why-title" class="why__title font-serif" data-aos="fade-up" data-aos-delay="100">
+                <span class="d-block">Why students shortlist</span>
+                <span class="d-block text-brand-red">this campus</span>
+              </h2>
+
+              <h3 class="why__subtitle font-serif fw-bold" data-aos="fade-up" data-aos-delay="200">
+                Fees and scholarships
+              </h3>
+
+              <p class="why__text mb-0" data-aos="fade-up" data-aos-delay="300">
+                Fees and scholarship criteria are set by the university and change by year. We share the current
+                official figures on your call, and tell you what the university currently publishes about scholarships.
+                We cannot promise one.
+              </p>
+            </div>
+            <!-- 3. Diagram as an image (replace src, width and height with your file's real values) -->
+            <div class="col-12 col-md-6">
+              <img
+                class="why__diagram img-fluid d-block mx-auto"
+                src="./images/Diagram.webp"
+                alt="SIU Dubai at the centre. One city, many courses: business, computing, engineering, psychology and media sit under one roof. Recognition in the UAE: the university says CAA-accredited degrees are recognised by public and private employers in the UAE. Professional add-ons: B.Com options include ACCA preparation, and the BBA has a dual-degree route with a UK university."
+                width="760"
+                height="540"
+                loading="lazy"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ============ FAQ SECTION ============ -->
-  <section id="faqs" class="faq-section">
-    <div class="container custom-container px-gutter">
-      <div class="row align-items-start g-4">
-        <!-- Left Heading Column -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-duration="750">
-          <span class="eyebrow align-items-center fw-bold text-uppercase" data-aos="fade-up" data-aos-duration="700">
-            FAQS
-          </span>
+    </section>
+    <!-- ============ FAQ SECTION ============ -->
+    <section id="faqs" class="faq-section">
+      <div class="container custom-container px-gutter">
+        <div class="row align-items-start g-4">
+          <!-- Left Heading Column -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-duration="750">
+            <span class="eyebrow align-items-center fw-bold text-uppercase" data-aos="fade-up" data-aos-duration="700">
+              FAQS
+            </span>
 
-          <h2 class="faq-title font-serif mb-0">Frequently <span class="faq-title__accent">asked questions</span></h2>
-        </div>
+            <h2 class="faq-title font-serif mb-0">Frequently <span class="faq-title__accent">asked questions</span></h2>
+          </div>
 
-        <!-- Right Accordion Column -->
-        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="120" data-aos-duration="800">
-          <div class="accordion faq-accordion" id="faqAccordion">
-            <!-- Item 1 (Open by default like reference image) -->
-            <div class="accordion-item faq-item">
-              <h3 class="accordion-header" id="faqHeadingOne">
-                <button class="accordion-button faq-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-                  Is Symbiosis Dubai the same as Symbiosis Pune?
-                </button>
-              </h3>
-              <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body faq-body">
-                  It is the same university group but a separate campus licensed in the UAE. Course structure, fees
-                  and intakes can differ. Ask for the Dubai programme document.
+          <!-- Right Accordion Column -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="120" data-aos-duration="800">
+            <div class="accordion faq-accordion" id="faqAccordion">
+              <!-- Item 1 (Open by default like reference image) -->
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="faqHeadingOne">
+                  <button
+                    class="accordion-button faq-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseOne"
+                    aria-expanded="true"
+                    aria-controls="faqCollapseOne"
+                  >
+                    Is Symbiosis Dubai the same as Symbiosis Pune?
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="faqHeadingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-body">
+                    It is the same university group but a separate campus licensed in the UAE. Course structure, fees
+                    and intakes can differ. Ask for the Dubai programme document.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Item 2 -->
-            <div class="accordion-item faq-item">
-              <h3 class="accordion-header" id="faqHeadingTwo">
-                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
-                  Are the programmes accredited?
-                </button>
-              </h3>
-              <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body faq-body">
-                  The university states that its programmes are accredited by the UAE's Commission for Academic
-                  Accreditation. Ask for the accreditation listing for your exact course.
+              <!-- Item 2 -->
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="faqHeadingTwo">
+                  <button
+                    class="accordion-button faq-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseTwo"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseTwo"
+                  >
+                    Are the programmes accredited?
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-body">
+                    The university states that its programmes are accredited by the UAE's Commission for Academic
+                    Accreditation. Ask for the accreditation listing for your exact course.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Item 3 -->
-            <div class="accordion-item faq-item">
-              <h3 class="accordion-header" id="faqHeadingThree">
-                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-                  Are the programmes taught on campus or online?
-                </button>
-              </h3>
-              <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body faq-body">
-                  It depends on the programme: the MA in English is listed as an online programme. Before you pay
-                  anything, we confirm in writing how your chosen programme is delivered and what that means for
-                  attendance and your visa.
+              <!-- Item 3 -->
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="faqHeadingThree">
+                  <button
+                    class="accordion-button faq-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseThree"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseThree"
+                  >
+                    Are the programmes taught on campus or online?
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-body">
+                    It depends on the programme: the MA in English is listed as an online programme. Before you pay
+                    anything, we confirm in writing how your chosen programme is delivered and what that means for
+                    attendance and your visa.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Item 4 -->
-            <div class="accordion-item faq-item">
-              <h3 class="accordion-header" id="faqHeadingFour">
-                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
-                  Is financial support available?
-                </button>
-              </h3>
-              <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body faq-body">
-                  Banks, including ICICI Bank, offer education-loan schemes for these programmes. Approval and terms
-                  are the lender's decision. We explain the options and the documents you will need.
+              <!-- Item 4 -->
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="faqHeadingFour">
+                  <button
+                    class="accordion-button faq-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseFour"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseFour"
+                  >
+                    Is financial support available?
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingFour"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-body">
+                    Banks, including ICICI Bank, offer education-loan schemes for these programmes. Approval and terms
+                    are the lender's decision. We explain the options and the documents you will need.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Item 5 -->
-            <div class="accordion-item faq-item">
-              <h3 class="accordion-header" id="faqHeadingFive">
-                <button class="accordion-button faq-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
-                  Can Catalyst AI get me admitted?
-                </button>
-              </h3>
-              <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body faq-body">
-                  No. The university decides. We help you pick the right course and prepare a complete application.
+              <!-- Item 5 -->
+              <div class="accordion-item faq-item">
+                <h3 class="accordion-header" id="faqHeadingFive">
+                  <button
+                    class="accordion-button faq-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseFive"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseFive"
+                  >
+                    Can Catalyst AI get me admitted?
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingFive"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-body">
+                    No. The university decides. We help you pick the right course and prepare a complete application.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer d-flex flex-column position-relative overflow-hidden">
-    <div class="container">
-      <!-- Top Row: Brand & Company Info + Legal Links -->
-      <div class="row justify-content-between g-4 footer__top">
-        <!-- Left Column: Brand + Contact Details -->
-        <div class="col-lg-6 col-md-7" data-aos="fade-up" data-aos-duration="700">
-          <a href="#home"
-            class="footer__logo text-white fw-bold font-arimo d-inline-block text-decoration-none mb-2 mb-md-3">
-            CatalystAI
-          </a>
+    </section>
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer d-flex flex-column position-relative overflow-hidden">
+      <div class="container">
+        <!-- Top Row: Brand & Company Info + Legal Links -->
+        <div class="row justify-content-between g-4 footer__top">
+          <!-- Left Column: Brand + Contact Details -->
+          <div class="col-lg-6 col-md-7" data-aos="fade-up" data-aos-duration="700">
+            <a
+              href="#home"
+              class="footer__logo text-white fw-bold font-arimo d-inline-block text-decoration-none mb-2 mb-md-3"
+            >
+              CatalystAI
+            </a>
 
-          <p class="footer__company fw-semibold">Catalyst AI (Catalystai Technology Private Limited)</p>
+            <p class="footer__company fw-semibold">Catalyst AI (Catalystai Technology Private Limited)</p>
 
-          <ul class="footer__details list-unstyled mb-0 d-flex flex-column gap-2">
-            <li>[CIN or GST number]</li>
-            <li>[Registered address]</li>
-            <li><a href="tel:+910000000000">[Phone]</a></li>
-            <li><a href="mailto:info@catalystai.in">[Email]</a></li>
-          </ul>
+            <ul class="footer__details list-unstyled mb-0 d-flex flex-column gap-2">
+              <li>[CIN or GST number]</li>
+              <li>[Registered address]</li>
+              <li><a href="tel:+910000000000">[Phone]</a></li>
+              <li><a href="mailto:info@catalystai.in">[Email]</a></li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Legal Links -->
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
+            <span class="footer__heading d-inline-flex align-items-center fw-bold text-uppercase mb-3"> LEGAL </span>
+
+            <ul class="footer__links list-unstyled mb-0 d-flex flex-column gap-2 gap-md-3">
+              <li><a href="#privacy-policy">Privacy Policy</a></li>
+              <li><a href="#terms-of-use">Terms of Use</a></li>
+              <li><a href="#disclaimer">Disclaimer</a></li>
+              <li><a href="#refund-policy">[Refund policy if fees are charged]</a></li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Right Column: Legal Links -->
-        <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
-          <span class="footer__heading d-inline-flex align-items-center fw-bold text-uppercase mb-3"> LEGAL </span>
+        <!-- Divider Line -->
+        <hr class="footer__divider" data-aos="fade" data-aos-delay="200" />
 
-          <ul class="footer__links list-unstyled mb-0 d-flex flex-column gap-2 gap-md-3">
-            <li><a href="#privacy-policy">Privacy Policy</a></li>
-            <li><a href="#terms-of-use">Terms of Use</a></li>
-            <li><a href="#disclaimer">Disclaimer</a></li>
-            <li><a href="#refund-policy">[Refund policy if fees are charged]</a></li>
-          </ul>
+        <!-- Bottom Disclaimer & Copyright -->
+        <div class="footer__bottom" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700">
+          <p class="footer__disclaimer-label text-uppercase fw-bold">DISCLAIMER</p>
+          <p class="footer__disclaimer-text mb-4">
+            Catalyst AI is an independent consultancy and not the official website of Symbiosis International
+            University. Programme details come from public sources and may change. Visit siu-dubai.ac.ae for official
+            information.
+          </p>
+
+          <p class="footer__copyright mb-0">&copy; 2026 Catalystai Technology Private Limited. All rights reserved.</p>
         </div>
       </div>
 
-      <!-- Divider Line -->
-      <hr class="footer__divider" data-aos="fade" data-aos-delay="200" />
+      <!-- Bottom-Right Accent Wedge -->
+      <span class="footer__wedge" aria-hidden="true"></span>
+    </footer>
 
-      <!-- Bottom Disclaimer & Copyright -->
-      <div class="footer__bottom" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700">
-        <p class="footer__disclaimer-label text-uppercase fw-bold">DISCLAIMER</p>
-        <p class="footer__disclaimer-text mb-4">
-          Catalyst AI is an independent consultancy and not the official website of Symbiosis International
-          University. Programme details come from public sources and may change. Visit siu-dubai.ac.ae for official
-          information.
-        </p>
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Your custom JS (LAST, matching your file name) -->
+    <script src="./js/script.js"></script>
+    <script>
+      /* ---------- Lead form settings ---------- */
+      const SCRIPT_URL =
+        'https://script.google.com/macros/s/AKfycbzrDKWqtpv0M3a1UmBsDBKVnvX0uhdGeXrJRZy6gha68rI_2YvxMbgAQLD7IMWY1wJ38g/exec';
+      const PAGE_TYPE = 'symbiosis';
 
-        <p class="footer__copyright mb-0">&copy; 2026 Catalystai Technology Private Limited. All rights reserved.</p>
-      </div>
-    </div>
+      /* ---------- Consultation form -> Google Sheet ---------- */
+      function initConsultForm() {
+        const form = document.getElementById('consultationForm');
+        if (!form) return;
 
-    <!-- Bottom-Right Accent Wedge -->
-    <span class="footer__wedge" aria-hidden="true"></span>
-  </footer>
+        const btn = document.getElementById('consultSubmitBtn');
+        const btnText = btn.querySelector('.consult-submit__text');
+        const statusBox = document.getElementById('formStatusMsg');
+        const defaultText = btnText.textContent;
 
-  <!-- Bootstrap JS bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Your custom JS (LAST, matching your file name) -->
-  <script src="./js/script.js"></script>
-  <script>
-    /* ---------- Lead form settings ---------- */
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzrDKWqtpv0M3a1UmBsDBKVnvX0uhdGeXrJRZy6gha68rI_2YvxMbgAQLD7IMWY1wJ38g/exec';
-    const PAGE_TYPE = 'symbiosis';   // must match the key in SHEET_CONFIG (Apps Script)
-    const THANK_YOU_URL = "";        // optional: e.g. "thankyou.html". Leave empty to show an inline message
+        const showStatus = (type, message) => {
+          statusBox.className = `consult-status alert alert-${type} py-2 mb-3`;
+          statusBox.textContent = message;
+        };
+        const hideStatus = () => {
+          statusBox.className = 'consult-status d-none';
+        };
 
-    /* ---------- Consultation form -> Google Sheet ("Symbiosis" tab) ---------- */
-    function initConsultForm() {
-      const form = document.getElementById("consultationForm");
-      if (!form) return;
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          hideStatus();
 
-      const btn = document.getElementById("consultSubmitBtn");
-      const btnText = btn.querySelector(".consult-submit__text");
-      const statusBox = document.getElementById("formStatusMsg");
-      const defaultText = btnText.textContent;
+          if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            form.querySelector(':invalid') && form.querySelector(':invalid').focus();
+            return;
+          }
 
-      // type: "success" | "danger" (Bootstrap alert colours)
-      const showStatus = (type, message) => {
-        statusBox.className = `consult-status alert alert-${type} py-2 mb-3`;
-        statusBox.textContent = message;
-      };
-      const hideStatus = () => { statusBox.className = "consult-status d-none"; };
+          // Capture user details before anything resets
+          var userName = form.fullName ? form.fullName.value.trim() : '';
+          var userEmail = form.emailAddress ? form.emailAddress.value.trim() : '';
+          var userMobile = form.mobileNumber ? form.mobileNumber.value.trim() : '';
 
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        hideStatus();
+          btn.disabled = true;
+          btnText.textContent = 'Sending...';
 
-        // Bootstrap validation (form has novalidate, so we check manually)
-        if (!form.checkValidity()) {
-          form.classList.add("was-validated");
-          form.querySelector(":invalid")?.focus();
-          return;
-        }
+          var body = new URLSearchParams(new FormData(form));
+          body.set('consent', form.elements.consent.checked ? 'Yes' : 'No');
+          body.set('pageType', PAGE_TYPE);
+          body.set('page_url', window.location.href);
 
-        btn.disabled = true;
-        btnText.textContent = "Sending...";
+          fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: body })
+            .then(function () {
+              var qs = new URLSearchParams({
+                name: userName,
+                email: userEmail,
+                mobile: userMobile,
+              });
+              window.location.href = '../thankyou?' + qs.toString();
+            })
+            .catch(function () {
+              showStatus('danger', 'Something went wrong. Please check your connection and try again.');
+              btn.disabled = false;
+              btnText.textContent = defaultText;
+            });
+        });
+      }
 
-        // Same field names as the form, plus the 3 extras the sheet needs
-        const body = new URLSearchParams(new FormData(form));
-        body.set("consent", form.elements.consent.checked ? "Yes" : "No");
-        body.set("pageType", PAGE_TYPE);
-        body.set("page_url", window.location.href);
-
-        try {
-          await fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body });
-
-          window.location.href = 'thankyou?' + qs.toString();
-
-          form.reset();
-          form.classList.remove("was-validated");
-          showStatus("success", "Thank you! We have received your request and will contact you shortly.");
-        } catch (err) {
-          showStatus("danger", "Something went wrong. Please check your connection and try again.");
-        }
-
-        btn.disabled = false;
-        btnText.textContent = defaultText;
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", initConsultForm);
-  </script>
-</body>
-
+      document.addEventListener('DOMContentLoaded', initConsultForm);
+    </script>
+  </body>
 </html>

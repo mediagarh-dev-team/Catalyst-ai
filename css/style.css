@@ -419,11 +419,23 @@ h4 {
   transform: translateY(-2px);
   box-shadow: 0 14px 24px -12px rgba(75, 44, 156, 0.7);
 }
-.btn:first-child:active {
-  color: #fff;
-  background: var(--purple);
-  border-color: var(--bs-btn-active-border-color);
+.btn-submit:active,
+.btn-submit:focus,
+.btn-submit:focus:active,
+.btn-submit:focus-visible {
+  color: #fff !important;
+  background: var(--purple-dark) !important;
+  background-color: var(--purple-dark) !important;
+  border-color: transparent !important;
+  box-shadow: 0 6px 16px -8px rgba(75, 44, 156, 0.6) !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
+.btn-submit:active .btn-submit__icon,
+.btn-submit:focus .btn-submit__icon {
+  background: var(--orange);
+}
+
 .btn-submit:hover .btn-submit__icon {
   transform: translateX(3px);
 }
