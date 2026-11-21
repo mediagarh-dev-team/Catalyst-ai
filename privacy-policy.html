@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Catalyst AI</title>
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Privacy Policy for Catalyst AI, an independent education counselling practice for Dubai campuses."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Shared tokens -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      /* ---- Legal-page extras ---- */
+      body {
+        background: #f5f2fc;
+      }
+
+      /* Hero band */
+      .legal-hero {
+        background: #1c1433;
+        background-image: radial-gradient(circle at 80% 50%, rgba(75, 44, 156, 0.55) 0%, transparent 65%);
+        color: #fff;
+        padding: 64px 0 56px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .legal-hero::after {
+        content: '';
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: rgba(242, 107, 31, 0.15);
+        pointer-events: none;
+      }
+      .legal-hero h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(30px, 5vw, 48px);
+        font-weight: 400;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+      }
+      .legal-hero h1 span {
+        color: #f26b1f;
+      }
+      .legal-badge {
+        display: inline-block;
+        background: rgba(242, 107, 31, 0.18);
+        color: #ffb78a;
+        border-radius: 999px;
+        padding: 6px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Layout: sidebar + content */
+      .legal-wrap {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 32px;
+        padding-top: 40px;
+        padding-bottom: 72px;
+        align-items: start;
+      }
+
+      /* TOC sidebar */
+      .legal-toc {
+        position: sticky;
+        top: 88px;
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid #e4e0ee;
+        padding: 22px 20px;
+        box-shadow: 0 10px 30px rgba(28, 20, 51, 0.06);
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .legal-toc::-webkit-scrollbar {
+        display: none;
+      }
+      .legal-toc h3 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #1c1433;
+        margin-bottom: 12px;
+      }
+      .legal-toc ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .legal-toc li a {
+        display: block;
+        padding: 7px 10px;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #6b6580;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .legal-toc li a:hover {
+        background: rgba(75, 44, 156, 0.08);
+        color: #4b2c9c;
+      }
+
+      /* Content card */
+      .legal-content {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #e4e0ee;
+        padding: 40px 36px;
+        box-shadow: 0 24px 60px -16px rgba(28, 20, 51, 0.08);
+      }
+
+      .legal-section {
+        padding-bottom: 28px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid #e4e0ee;
+        scroll-margin-top: 90px;
+      }
+      .legal-section:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .legal-section h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 22px;
+        font-weight: 400;
+        color: #1c1433;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .legal-num {
+        flex-shrink: 0;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: rgba(75, 44, 156, 0.1);
+        color: #4b2c9c;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+      }
+
+      .legal-section h3 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        color: #1c1433;
+        margin: 20px 0 8px;
+      }
+      .legal-section p {
+        margin-bottom: 12px;
+        font-size: 15px;
+        color: #4a4a5a;
+        line-height: 1.7;
+      }
+      .legal-section ul {
+        margin: 0 0 14px;
+        padding: 0;
+        list-style: none;
+      }
+      .legal-section ul li {
+        position: relative;
+        padding-left: 22px;
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #4a4a5a;
+        line-height: 1.65;
+      }
+      .legal-section ul li::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 10px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #f26b1f;
+      }
+      .legal-section ol.legal-ol {
+        margin: 0 0 14px;
+        padding: 0;
+        list-style: none;
+        counter-reset: lo;
+      }
+      .legal-section ol.legal-ol li {
+        counter-increment: lo;
+        position: relative;
+        padding-left: 36px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: #4a4a5a;
+        line-height: 1.65;
+      }
+      .legal-section ol.legal-ol li::before {
+        content: counter(lo);
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #4b2c9c;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+      }
+      .legal-section a {
+        color: #4b2c9c;
+        text-decoration: none;
+      }
+      .legal-section a:hover {
+        text-decoration: underline;
+        color: #f26b1f;
+      }
+
+      .legal-note {
+        background: rgba(75, 44, 156, 0.07);
+        border-left: 4px solid #4b2c9c;
+        border-radius: 10px;
+        padding: 14px 18px;
+        margin: 14px 0;
+        font-size: 14.5px;
+        color: #3a2180;
+        line-height: 1.6;
+      }
+
+      .legal-contact {
+        background: #f5f2fc;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 10px 0 14px;
+        list-style: none;
+      }
+      .legal-contact li {
+        margin-bottom: 6px;
+        font-size: 15px;
+        color: #4a4a5a;
+        padding-left: 0 !important;
+      }
+      .legal-contact li::before {
+        display: none !important;
+      }
+
+      /* Footer */
+      .footer-bottom {
+        background: #1c1433;
+        padding: 18px 16px;
+      }
+      .footer-bottom-inner {
+        max-width: 1472px;
+        margin-inline: auto;
+        padding-inline: 16px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 10px 24px;
+      }
+      .footer-bottom-left {
+        justify-self: start;
+      }
+      .footer-bottom-credit {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .footer-bottom-credit span {
+        color: #ffb78a;
+        font-weight: 700;
+      }
+      .footer-bottom-right {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 13px;
+        transition: opacity 0.2s;
+      }
+      .footer-bottom a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+      .footer-sep {
+        opacity: 0.4;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Responsive */
+      @media (max-width: 991px) {
+        .legal-wrap {
+          grid-template-columns: 1fr;
+        }
+        .legal-toc {
+          position: static;
+          max-height: none;
+        }
+        .footer-bottom-inner {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          text-align: center;
+        }
+        .footer-bottom-left,
+        .footer-bottom-right {
+          justify-self: center;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 575px) {
+        .legal-content {
+          padding: 26px 18px;
+        }
+        .legal-section h2 {
+          font-size: 19px;
+        }
+        .legal-hero {
+          padding: 48px 0 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== HEADER ========== -->
+    <div class="header-strip" role="note">
+      <div class="site-container">
+        <p class="header-strip__text mb-0">
+          <span class="header-strip__dot" aria-hidden="true"></span>
+          Catalyst AI is an independent education consultancy. This is not the official website of any university.
+        </p>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-container">
+        <nav class="d-flex align-items-center justify-content-between" aria-label="Main">
+          <a href="index.html" class="site-logo" aria-label="Catalyst AI home">
+            <img src="images/logo.svg" alt="Catalyst AI" class="site-logo__img" />
+          </a>
+          <a href="index.html#enquiry" class="btn btn-brand btn-brand--sm">Request a consultation</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="legal-hero">
+      <div class="site-container">
+        <h1>Privacy <span>Policy</span></h1>
+        <span class="legal-badge">Last updated: 11 November 2026</span>
+      </div>
+    </section>
+
+    <!-- ========== BODY ========== -->
+    <main>
+      <div class="site-container">
+        <div class="legal-wrap">
+          <!-- Sidebar TOC -->
+          <aside class="legal-toc" aria-label="Page contents">
+            <h3>Contents</h3>
+            <ol>
+              <li><a href="#s1">1. Introduction</a></li>
+              <li><a href="#s2">2. Who is responsible</a></li>
+              <li><a href="#s3">3. Information we collect</a></li>
+              <li><a href="#s4">4. How we use your information</a></li>
+              <li><a href="#s5">5. Consent</a></li>
+              <li><a href="#s6">6. Who we share with</a></li>
+              <li><a href="#s7">7. Cookies &amp; advertising</a></li>
+              <li><a href="#s8">8. How long we keep data</a></li>
+              <li><a href="#s9">9. How we protect data</a></li>
+              <li><a href="#s10">10. Your rights</a></li>
+              <li><a href="#s11">11. Children</a></li>
+              <li><a href="#s12">12. Third-party websites</a></li>
+              <li><a href="#s13">13. Disclaimer</a></li>
+              <li><a href="#s14">14. Contact &amp; grievance</a></li>
+              <li><a href="#s15">15. Changes to this policy</a></li>
+            </ol>
+          </aside>
+
+          <!-- Article -->
+          <article class="legal-content">
+            <section class="legal-section" id="s1">
+              <h2><span class="legal-num">1</span>Introduction</h2>
+              <p>
+                This Privacy Policy explains how Catalystai Technology Private Limited, operating as
+                <strong>Catalyst AI</strong> ("we", "us", "our"), collects, uses, shares and protects your personal
+                information when you visit this website or submit an enquiry through it.
+              </p>
+              <p>
+                Catalyst AI is an independent admissions and counselling practice for Dubai campuses. This website is
+                not the official website of any university. Admission decisions, fees, programme content and degree
+                awards are the sole responsibility of the respective institutions.
+              </p>
+              <p>
+                By using this website or submitting your details, you agree to the practices described in this Privacy
+                Policy. If you do not agree, please do not use the website or submit your information.
+              </p>
+              <p>
+                This policy is prepared in line with the Information Technology Act 2000, the IT (Reasonable Security
+                Practices and Procedures and Sensitive Personal Data or Information) Rules 2011, and the Digital
+                Personal Data Protection Act 2023, as applicable.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s2">
+              <h2><span class="legal-num">2</span>Who is responsible for your data</h2>
+              <ul class="legal-contact">
+                <li><strong>Business name:</strong> Catalyst AI (Catalystai Technology Private Limited)</li>
+                <li>
+                  <strong>Registered address:</strong> The Address Commercia, Office No. 427, Near Hinjewadi Bridge,
+                  Wakad – 411057
+                </li>
+                <li><strong>Email:</strong> <a href="mailto:support@procounsel.co.in">support@procounsel.co.in</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+917004789484">+91 7004789484</a></li>
+              </ul>
+              <p>
+                For the purpose of the DPDP Act, we act as the data fiduciary for the information you submit through
+                this website.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s3">
+              <h2><span class="legal-num">3</span>Information we collect</h2>
+              <h3>3.1 Information you provide to us</h3>
+              <p>When you fill in the enquiry form or contact us by phone, email or WhatsApp, we collect:</p>
+              <ul>
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Mobile number</li>
+                <li>City of residence</li>
+                <li>Educational qualification and programme preferences</li>
+              </ul>
+              <div class="legal-note">
+                We do not ask for sensitive information such as passwords, bank account details, card numbers or
+                government ID numbers. Please do not share them in forms or messages.
+              </div>
+              <h3>3.2 Information collected automatically</h3>
+              <p>When you visit the website, we may automatically collect:</p>
+              <ul>
+                <li>IP address, browser type, device type and operating system</li>
+                <li>Pages viewed, time spent and links clicked</li>
+                <li>Approximate location derived from IP address</li>
+                <li>Campaign parameters such as UTM source, medium and keyword</li>
+              </ul>
+            </section>
+
+            <section class="legal-section" id="s4">
+              <h2><span class="legal-num">4</span>How we use your information</h2>
+              <p>We use your information to:</p>
+              <ol class="legal-ol">
+                <li>Respond to your enquiry and provide free admissions counselling.</li>
+                <li>Contact you by phone, SMS, WhatsApp and email regarding your enquiry and application process.</li>
+                <li>Share your enquiry with the relevant Dubai campus so you can be considered for admission.</li>
+                <li>Help you connect with education loan providers, only where you request loan assistance.</li>
+                <li>Maintain records and improve our counselling quality.</li>
+                <li>Analyse website traffic and measure the performance of our advertising.</li>
+                <li>Show relevant advertisements on Google and Meta platforms.</li>
+                <li>Detect and prevent fraud, spam and security incidents.</li>
+                <li>Comply with applicable laws and lawful requests from authorities.</li>
+              </ol>
+            </section>
+
+            <section class="legal-section" id="s5">
+              <h2><span class="legal-num">5</span>Consent</h2>
+              <p>
+                We process your personal information on the basis of your consent, given when you submit the form and
+                tick the consent box. You may withdraw consent at any time by writing to us at the address in Section
+                14. Withdrawal does not affect processing already carried out.
+              </p>
+              <h3>Calls, SMS and WhatsApp</h3>
+              <p>
+                By submitting your mobile number, you authorise us to contact you by call, SMS and WhatsApp, even if
+                your number is on the DND / NCPR register, for the purpose of responding to your enquiry. You can ask us
+                to stop at any time by telling the caller, replying STOP, or emailing us.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s6">
+              <h2><span class="legal-num">6</span>Who we share your information with</h2>
+              <p>We do not sell your personal information. We may share it with:</p>
+              <ul>
+                <li>The Dubai campus you enquire about and its authorised admissions teams.</li>
+                <li>Education loan partners, only if you request loan assistance.</li>
+                <li>
+                  Service providers (CRM, telephony, email, cloud hosting, analytics and advertising platforms) who act
+                  on our behalf.
+                </li>
+                <li>Professional advisers, auditors and legal authorities, where required by law.</li>
+                <li>
+                  A successor business, if we merge or transfer our business, subject to this policy's protections.
+                </li>
+              </ul>
+              <h3>International transfers</h3>
+              <p>
+                Campus partners may operate outside India, so your information may be shared with or accessed from other
+                countries. Where this happens, we take reasonable steps to ensure it is handled consistently with this
+                policy and applicable law.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s7">
+              <h2><span class="legal-num">7</span>Cookies, pixels and advertising technologies</h2>
+              <p>
+                This website uses cookies and similar technologies, including Google Tag Manager, Google Analytics,
+                Google Ads conversion tracking, and the Meta (Facebook) Pixel. We use them to understand how visitors
+                use the website, measure campaign performance, and show relevant advertisements to previous visitors
+                (remarketing).
+              </p>
+              <h3>How to control this</h3>
+              <ul>
+                <li>Block or delete cookies through your browser settings.</li>
+                <li>
+                  Google ads personalisation:
+                  <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer"
+                    >adssettings.google.com</a
+                  >
+                </li>
+                <li>
+                  Meta ads preferences:
+                  <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer"
+                    >facebook.com/adpreferences</a
+                  >
+                </li>
+                <li>
+                  Opt out of Google Analytics:
+                  <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer"
+                    >tools.google.com/dlpage/gaoptout</a
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <section class="legal-section" id="s8">
+              <h2><span class="legal-num">8</span>How long we keep your information</h2>
+              <p>
+                We keep your personal information only as long as needed for the purposes in this policy — generally up
+                to 24 months from your last interaction — unless the law requires longer retention. After that, we
+                delete or anonymise it.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s9">
+              <h2><span class="legal-num">9</span>How we protect your information</h2>
+              <p>
+                We use reasonable technical and organisational safeguards — including encrypted (HTTPS) connections,
+                access controls and secure hosting — to protect your information against unauthorised access, loss or
+                disclosure. No internet transmission is completely secure; we cannot guarantee absolute security. If a
+                breach occurs, we will notify affected persons and authorities as required by law.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s10">
+              <h2><span class="legal-num">10</span>Your rights</h2>
+              <p>Subject to applicable law, you have the right to:</p>
+              <ul>
+                <li>Request a summary of the personal information we hold about you</li>
+                <li>Ask us to correct inaccurate or incomplete information</li>
+                <li>Ask us to delete your information when it is no longer needed</li>
+                <li>Withdraw your consent at any time</li>
+                <li>Nominate another person to exercise your rights in the event of your death or incapacity</li>
+                <li>Raise a grievance with us or approach the Data Protection Board of India once operational</li>
+              </ul>
+              <p>To exercise any of these rights, email us at the address in Section 14.</p>
+            </section>
+
+            <section class="legal-section" id="s11">
+              <h2><span class="legal-num">11</span>Children</h2>
+              <p>
+                The programmes on this website are for graduates and working professionals. This website is not directed
+                at individuals under 18 years of age, and we do not knowingly collect their personal information. If you
+                believe a child has submitted information to us, please contact us and we will delete it.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s12">
+              <h2><span class="legal-num">12</span>Third-party websites</h2>
+              <p>
+                This website may contain links to third-party websites, including official university sites and loan
+                providers. We are not responsible for their content or privacy practices. Please read their privacy
+                policies before sharing information with them.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s13">
+              <h2><span class="legal-num">13</span>Accuracy of information and disclaimer</h2>
+              <p>
+                Information on this website about programmes, placements, fees, loans, visas and admissions is provided
+                by or based on information from the respective universities and third parties, and is subject to change.
+                Logos and trademarks belong to their respective owners and their use does not imply endorsement.
+              </p>
+            </section>
+
+            <section class="legal-section" id="s14">
+              <h2><span class="legal-num">14</span>Contact and grievance officer</h2>
+              <p>For questions, to exercise your rights, or to make a complaint, contact:</p>
+              <ul class="legal-contact">
+                <li><strong>Grievance / Privacy Officer:</strong> Raghu</li>
+                <li><strong>Email:</strong> <a href="mailto:support@procounsel.co.in">support@procounsel.co.in</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+917004789484">+91 7004789484</a></li>
+                <li>
+                  <strong>Address:</strong> The Address Commercia, Office No. 427, Near Hinjewadi Bridge, Wakad – 411057
+                </li>
+                <li><strong>Working hours:</strong> Monday to Saturday, 10:00 AM – 6:30 PM IST</li>
+              </ul>
+              <p>We will acknowledge your complaint within 48 hours and aim to resolve it within 15 days.</p>
+            </section>
+
+            <section class="legal-section" id="s15">
+              <h2><span class="legal-num">15</span>Changes to this policy</h2>
+              <p>
+                We may update this Privacy Policy from time to time. The latest version will always be available on this
+                page with the "Last updated" date at the top. Continued use of the website after changes means you
+                accept the updated policy.
+              </p>
+            </section>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <div class="footer-bottom-left">
+          <a href="./pdf/CatalystaiTechnologyPrivateLimitedMOM.pdf" target="_blank" rel="noopener noreferrer">
+            Catalystai Technology Private Limited – MOM
+          </a>
+        </div>
+        <p class="footer-bottom-credit">Design &amp; developed by <span>Mediagarh</span></p>
+        <div class="footer-bottom-right">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span class="footer-sep">|</span>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
