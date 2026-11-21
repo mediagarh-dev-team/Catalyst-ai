@@ -1,11 +1,73 @@
 @media (max-width: 946px) {
     .container {
-        padding: auto 16px;
+        padding: auto 14px;
     }
 
-    .topbar {
+    .site-header {
+        padding: 0;
+    }
+
+    .custom-container,
+    .consult-section {
+        padding: 54px 14px;
+    }
+
+    .hero__content {
+        min-height: 75vh;
+    }
+
+    .consult-card__left {
+        padding: 20px 10px 30px 10px;
+    }
+
+    .site-footer {
+        padding: 48px 14px;
+        gap: 28px;
+    }
+
+    .topbar,
+    .eyebrow,
+    .footer__copyright,
+    .footer__disclaimer-label,
+    .snapshot__eyebrow,
+    .faq-body {
         font-size: 12px;
         line-height: normal;
+    }
+
+    .footer__divider {
+        margin: 28px 0;
+    }
+
+    .hero__title,
+    .snapshot__title,
+    .admission__title,
+    .why__title,
+    .faq-title {
+        font-size: 38px;
+    }
+
+    .footer__logo {
+        font-size: 26px
+    }
+
+    .footer__disclaimer-text,
+    .footer__details li,
+    .footer__details a,
+    .snapshot__lead {
+        font-size: 14px;
+    }
+
+    .hero__text,
+    .footer__links a,
+    .footer__company,
+    .why__subtitle {
+        font-size: 16px;
+    }
+
+    .hero__wedge {
+        height: 40px;
+        clip-path: polygon(0 100%, 100% 15%, 100% 100%);
     }
 
     .brand img {
@@ -20,96 +82,16 @@
         --bs-btn-border-radius: 0;
         transition: color 0.15s, background-color 0.15s, border-color 0.15s, transform 0.2s;
     }
-}
-
-@media (max-width: 575.98px) {
-    .topbar {
-        font-size: 12px;
-        line-height: 16px;
-        padding: 8px 0;
-    }
-
-    .brand img {
-        height: 36px;
-    }
-
-    .header-end {
-        gap: 12px;
-    }
-
-    .btn-brand {
-        --bs-btn-padding-x: 16px;
-        --bs-btn-padding-y: 10px;
-        --bs-btn-font-size: 14px;
-    }
 
     .hero__content {
-        padding: 2.75rem var(--gutter) 4.5rem;
+        position: relative;
+        z-index: 2;
+        gap: 20px;
+        padding: 32px 24px;
+        background: linear-gradient(240deg, rgba(20, 27, 91, 0.92) 0%, rgba(20, 27, 91, 0.45) 50%, rgba(20, 27, 91, 0.00) 100%);
     }
 
-    .hero__actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero__actions .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero__media {
-        min-height: 15rem;
-    }
-}
-
-/* Medium devices (tablets >= 768px) */
-@media (min-width: 768px) {
-    :root {
-        --gutter: 2rem;
-    }
-
-    .hero__media {
-        min-height: 22rem;
-    }
-}
-
-/* Large devices (desktops >= 992px - Matches reference screenshot) */
-@media (min-width: 992px) {
-    :root {
-        --gutter: 3rem;
-    }
-
-    .hero {
-        grid-template-columns: 0.24fr 1.06fr 1fr;
-        min-height: 36rem;
-    }
-
-    .hero__tint {
-        display: block;
-        background-color: var(--hero-panel-bg);
-        background-image: var(--hero-overlay), var(--hero-bg-img);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: var(--hero-tint-opacity);
-    }
-
-    .hero__content {
-        padding: 4rem 2.5rem 5.5rem 3.5rem;
-    }
-
-    .hero__media {
-        min-height: 100%;
-    }
-}
-
-/* Extra large screens (>= 1400px) */
-@media (min-width: 1400px) {
-    .hero {
-        min-height: 40rem;
-    }
-
-    .hero__content {
-        padding: 4.5rem 3rem 6rem 4.5rem;
+    .faq-button {
+        font-size: 16px;
     }
 }
