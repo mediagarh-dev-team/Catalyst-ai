@@ -1,6 +1,7 @@
 :root {
     --font-sans: "DM Sans", sans-serif;
     --font-serif: "DM Serif Display", serif;
+    --font-arimo: "Arimo", sans-serif;
 
     /* ---------- Brand palette (raw colors) ---------- */
     --peach: #FFC79E;
@@ -47,49 +48,64 @@
     --color-danger: var(--red);
 
     /* ---------- Page / Hero Theme Variables (Default = Symbiosis) ---------- */
-    --topbar-bg: var(--navy-2);
+    --topbar-bg: var(--navy);
     --topbar-text: rgba(255, 255, 255, 0.85);
-    --topbar-dot: var(--red);
+    --topbar-dot: var(--gold);
 
     --header-bg: var(--white);
-    --header-link: var(--navy-dark);
-    --header-link-hover: var(--red);
+    --header-link: var(--blue);
+    --header-link-hover: var(--gold);
     --header-shadow: 0 0.25rem 1.25rem rgb(11 18 51 / 0.08);
 
-    --hero-panel-bg: var(--navy-2);
-    --hero-eyebrow-color: var(--red);
+    --hero-panel-bg: var(--blue);
+    --hero-eyebrow-color: var(--gold);
     --hero-title-color: var(--white);
-    --hero-highlight-color: var(--red);
+    --hero-highlight-color: var(--gold);
     --hero-text-color: var(--blue-light);
-    --hero-wedge-bg: var(--red);
+    --hero-wedge-bg: var(--gold);
     --hero-tint-opacity: 0.35;
 
-    --hero-overlay: linear-gradient(90deg,
-            rgba(20, 27, 91, 0.92) 0%,
-            rgba(20, 27, 91, 0.45) 50%,
-            rgba(20, 27, 91, 0.00) 100%);
+    --hero-overlay: linear-gradient(90deg, rgba(7, 23, 91, 0.92) 0%, rgba(10, 46, 154, 0.45) 50%, rgba(7, 23, 91, 0.00) 100%);
 
-    --hero-btn-bg: var(--red);
-    --hero-btn-border: var(--red);
+    --hero-btn-bg: var(--gold);
+    --hero-btn-border: var(--gold);
     --hero-btn-hover-bg: var(--red-dark);
     --hero-btn-hover-border: var(--red-dark);
     --hero-outline-hover-color: var(--navy-2);
-
+    --consult-placeholder: #8C93AD;
+    --consult-pill-border: #D9DFEE;
+    --consult-pill-text: var(--navy-dark);
+    --consult-pill-active-bg: var(--hero-panel-bg);
+    --consult-pill-active-text: var(--white);
+    --consult-submit-bg: var(--hero-panel-bg);
+    --consult-submit-icon-bg: var(--hero-btn-bg);
+    --consult-muted-text: #6E7692;
     /* Background / Campus Image set via CSS variable */
-    --hero-bg-img: url("../image/Symbiosis/Campus_photo.webp");
+    --hero-bg-img: url("../images/Campus_photo.webp");
 
     /* ---------- Bootstrap overrides ---------- */
     --bs-primary: var(--color-primary);
     --bs-body-color: var(--color-text);
     --bs-link-color: var(--color-primary);
     --bs-link-hover-color: var(--color-accent);
-
     /* ---------- Layout & Spacing ---------- */
     --container-width: 1440px;
     --section-space: 100px;
-    --gutter: 1rem;
+    --gutter: 2rem;
     --panel-left: max(var(--gutter), calc((100% - var(--container-width)) / 2 + var(--gutter)));
     --split: calc(50% + 2rem);
+}
+
+@media (min-width: 992px) {
+    :root {
+        --gutter: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --gutter: clamp(2rem, 12.5vw, 4rem);
+    }
 }
 
 /* =========================================================
@@ -115,6 +131,26 @@ a {
 
 .container {
     max-width: var(--container-width);
+}
+
+.custom-container {
+    padding: 120px 0px;
+}
+
+.px-gutter {
+    padding-inline: var(--gutter);
+}
+
+.font-serif {
+    font-family: var(--font-serif)
+}
+
+.font-arimo {
+    font-family: var(--font-arimo)
+}
+
+.rounded-12px {
+    border-radius: 12px;
 }
 
 .text-brand-highlight {
@@ -148,7 +184,7 @@ a {
 
 .btn-navy {
     --bs-btn-color: var(--white);
-    --bs-btn-bg: var(--navy-2);
+    --bs-btn-bg: var(--blue);
     --bs-btn-hover-color: var(--white);
     --bs-btn-hover-bg: var(--blue);
     --bs-btn-active-color: var(--white);
@@ -182,6 +218,7 @@ a {
 .site-header {
     position: sticky;
     top: 0;
+    padding: 0 40px;
     z-index: 1030;
     background: white;
     transition: box-shadow 0.3s ease;
@@ -192,7 +229,7 @@ a {
 }
 
 .brand img {
-    height: 44px;
+    height: 60px;
     width: auto;
 }
 
@@ -225,9 +262,8 @@ a {
    ========================================================= */
 .hero {
     position: relative;
+    align-self: center;
     overflow: hidden;
-    min-height: 80vh;
-    background-color: var(--hero-panel-bg);
 }
 
 
@@ -236,30 +272,28 @@ a {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 72px 72px 120px 72px;
-    background-color: var(--hero-panel-bg);
     background-image: var(--hero-overlay), var(--hero-bg-img);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
 .hero__content {
     position: relative;
     z-index: 2;
-    max-width: 34rem;
-    padding: 3.5rem var(--gutter) 5.5rem;
+    max-width: 760px;
+    min-height: 85vh;
+    gap: 28px;
+    padding: 72px 72px 120px 72px;
+    background: var(--hero-panel-bg);
 }
 
 .eyebrow {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    gap: 12px;
+    font-size: 14px;
+    letter-spacing: 1.6px;
     color: var(--hero-eyebrow-color);
 }
 
@@ -274,39 +308,1090 @@ a {
 }
 
 .hero__title {
-    font-size: clamp(2.15rem, 1.5rem + 2.2vw, 3.1rem);
-    line-height: 1.12;
-    margin-bottom: 1.25rem;
+    font-size: 52px;
     color: var(--hero-title-color);
 }
 
 .hero__text {
-    max-width: 29rem;
-    margin-bottom: 1.75rem;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 18px;
     color: var(--hero-text-color);
 }
 
 /* Diagonal accent wedge at bottom of content panel */
 .hero__wedge {
     position: absolute;
+    bottom: 0px;
+    width: 100%;
     inset: auto 0 0 0;
     z-index: 3;
-    height: clamp(2.25rem, 4vw, 3.5rem);
+    height: 96px;
     background: var(--hero-wedge-bg);
     clip-path: polygon(0 100%, 100% 25%, 100% 100%);
     pointer-events: none;
 }
 
-/* Right side campus photo */
-.hero__media {
-    min-height: 18rem;
-    background-color: var(--hero-panel-bg);
-    background-image: var(--hero-bg-img);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* =========================================================
+   7. CONSULTATION SECTION
+   ========================================================= */
+.consult-section {
+    padding: 64px 0;
+}
+
+.consult-card {
+    max-width: 1120px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background: radial-gradient(38.46% 50% at 60% 69.23%, rgba(140, 107, 242, 0.35) 0%, rgba(140, 107, 242, 0.00) 100%), #0A2E9A;
+    box-shadow: 0 24px 60px 0 rgba(28, 20, 51, 0.14);
+    padding: 16px;
+}
+
+.consult-card__left {
+    padding: 40px;
+}
+
+.consult-card__eyebrow {
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #FFD98A;
+}
+
+.consult-card__eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 1.5px;
+    background: #FFD98A;
+    flex-shrink: 0;
+}
+
+.consult-card__title {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.consult-card__title span {
+    color: #FFD98A;
+}
+
+.consult-card__form-wrap {
+    border-radius: 12px;
+    background: #FFF;
+    padding: 32px;
+    gap: 18px;
+}
+
+.consult-label {
+    color: #141B5B;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.consult-input {
+    font-size: 13px;
+    color: #8A84A0;
+    border-radius: 8px;
+    border: 1px solid #DCE3F3;
+    background: #FFF;
+    padding: 10px 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consult-input::placeholder {
+    color: #8A84A0;
+}
+
+.consult-input:focus {
+    border-color: var(--hero-panel-bg);
+    box-shadow: 0 0 0 3px rgba(20, 27, 91, 0.1);
+}
+
+/* Selectable Pills */
+.consult-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--consult-pill-text);
+    border: 1px solid var(--consult-pill-border);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.consult-pill:hover {
+    border-color: var(--consult-pill-active-bg);
+    transform: translateY(-1px);
+}
+
+.btn-check:checked+.consult-pill {
+    background-color: var(--consult-pill-active-bg);
+    border-color: var(--consult-pill-active-bg);
+    color: var(--consult-pill-active-text);
+    box-shadow: 0 4px 12px rgba(20, 27, 91, 0.18);
+}
+
+/* Checkbox */
+.consult-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.consult-check .form-check-input {
+    float: none;
+    margin-left: 0;
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    border-color: var(--consult-input-border);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.consult-check .form-check-input:checked {
+    background-color: var(--consult-submit-bg);
+    border-color: var(--consult-submit-bg);
+}
+
+.consult-check .form-check-label {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--consult-muted-text);
+    cursor: pointer;
+}
+
+.consult-check .form-check-label a {
+    color: var(--consult-label-color);
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.consult-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 6px 6px 20px;
+    color: #FFF;
+    border-radius: 10px;
+    background: #0A2E9A;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.consult-submit:hover {
+    background: var(--consult-submit-bg);
+    color: #FFF;
+}
+
+.consult-submit:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.consult-submit__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: var(--consult-submit-icon-bg);
+    color: var(--white);
+    font-size: 13px;
+    transition: transform 0.2s ease;
+}
+
+.consult-submit:hover .consult-submit__icon {
+    transform: translateX(2px);
+}
+
+.consult-note {
+    font-size: 11px;
+    color: var(--consult-muted-text);
+}
+
+/* Status Banner */
+.consult-status {
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 10px 14px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.consult-status.is-success {
+    background-color: #E8F8F0;
+    color: #0F6E3D;
+    border: 1px solid #B7E8CE;
+}
+
+.consult-status.is-error {
+    background-color: #FDECEC;
+    color: #A61D24;
+    border: 1px solid #F7C2C5;
+}
+
+/* =========================================================
+   CAMPUS SNAPSHOT   
+   ========================================================= */
+.snapshot {
+    border-top: 1px solid #EBDDBE;
+    background: #F2F5FC;
+}
+
+/* ---------- Left column ---------- */
+.snapshot__eyebrow {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--navy-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .4em;
+}
+
+.snapshot__title {
+    font-size: 44px;
+    line-height: 54px;
+    color: var(--navy-2);
+}
+
+.text-brand-blue {
+    color: #0A2E9A;
+}
+
+/* Small uppercase button (extends .btn-brand) */
+.btn-caps {
+    --bs-btn-font-size: 14px;
+    --bs-btn-font-weight: 700;
+    width: fit-content
+}
+
+/* ---------- Right column ---------- */
+.snapshot__lead {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: var(--navy-dark);
+}
+
+/* ---------- Tabs ---------- */
+.snapshot__tabs {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid 0A2E9A;
+}
+
+/* Sliding navy block behind the active tab */
+.snapshot__indicator {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(100% / 3);
+    background: 0A2E9A;
+    transition: transform .5s cubic-bezier(.65, 0, .35, 1);
+}
+
+.snapshot__tabs[data-active="1"] .snapshot__indicator {
+    transform: translateX(100%);
+}
+
+.snapshot__tabs[data-active="2"] .snapshot__indicator {
+    transform: translateX(200%);
+}
+
+.snapshot__tab {
+    position: relative;
+    z-index: 1;
+    padding: .8rem .25rem;
+    border: 0;
+    background: none;
+    font-size: .625rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #0A2E9A;
+    transition: color .3s ease;
+}
+
+.snapshot__tab+.snapshot__tab {
+    border: 1px solid #0A2E9A;
+}
+
+.snapshot__tab.is-active {
+    color: #fff;
+    background: #0A2E9A;
+}
+
+.snapshot__tab:focus-visible {
+    outline: 2px solid #0A2E9A;
+    outline-offset: -4px;
+}
+
+/* ---------- Panels ---------- */
+.snapshot__panels {
+    display: grid;
+    margin-top: 1.75rem;
+}
+
+.snapshot__panel {
+    grid-area: 1 / 1;
+    visibility: hidden;
+    transition: visibility 0s .5s;
+}
+
+.snapshot__panel.is-active {
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+/* Stats fade + slide up, staggered */
+.snapshot__stat {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.snapshot__panel.is-active .snapshot__stat {
+    opacity: 1;
+    transform: none;
+}
+
+.snapshot__panel.is-active .snapshot__stat:nth-child(2) {
+    transition-delay: .1s;
+}
+
+.snapshot__panel.is-active .snapshot__stat:nth-child(3) {
+    transition-delay: .2s;
+}
+
+.snapshot__num {
+    margin-bottom: .5rem;
+    font-size: clamp(18px, 1.4rem + 1.4vw, 2.5rem);
+    line-height: 1;
+    color: #0A2E9A;
+}
+
+.snapshot__label {
+    max-width: 12rem;
+    margin: 0 auto;
+    font-size: .75rem;
+    line-height: 1.5;
+    color: var(--slate);
+}
+
+/* =========================================================
+   PROGRAMMES  (existing :root variables only, sizes in px)
+   Link after style.css, or paste at the bottom of it.
+   ========================================================= */
+.eyebrow {
+    color: #E3A62B;
+    letter-spacing: 2px;
+}
+
+/* ---------- Heading ---------- */
+.programmes__title {
+    font-size: 44px;
+    color: var(--navy-2);
+}
+
+/* ---------- Counter + arrows ---------- */
+.programmes__nav {
+    margin-top: 24px;
+}
+
+.programmes__count {
+    font-size: 12px;
+    color: var(--slate);
+}
+
+.prog-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--red);
+    color: var(--white);
+    font-size: 12px;
+    transition: background-color .2s, color .2s, transform .2s;
+}
+
+.prog-arrow:hover:not(:disabled) {
+    background: var(--red-dark);
+    transform: scale(1.08);
+}
+
+.prog-arrow:focus-visible {
+    outline: 2px solid var(--navy-2);
+    outline-offset: 2px;
+}
+
+.prog-arrow:disabled,
+.prog-arrow.swiper-button-disabled {
+    background: var(--blue-bg);
+    color: var(--gray-blue);
+    cursor: not-allowed;
+}
+
+/* ---------- Swiper (padding leaves room for the featured shadow) ---------- */
+.programmes__swiper {
+    margin: 32px -12px 0;
+    padding: 12px 12px 44px;
+}
+
+.programmes .swiper-slide {
+    height: auto;
+}
+
+/* ---------- Card ---------- */
+.prog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--blue-bg);
+    border-radius: 16px;
+    transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+
+.prog-card:hover {
+    border-color: var(--blue-light);
+}
+
+.prog-card__level {
+    margin: 0 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--red);
+}
+
+.prog-card__title {
+    margin: 0 0 16px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--navy-2);
+}
+
+/* Spec list: red dot + small label + value */
+.prog-card__specs {
+    flex: 1;
+    margin: 0 0 20px;
+}
+
+.prog-card__specs>div {
+    position: relative;
+    padding-left: 12px;
+}
+
+.prog-card__specs>div+div {
+    margin-top: 12px;
+}
+
+.prog-card__specs>div::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--red);
+}
+
+.prog-card__specs dt {
+    margin-bottom: 2px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--slate);
+}
+
+.prog-card__specs dd {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--navy-dark);
+}
+
+/* ---------- Pill button (built on Bootstrap's --bs-btn-* variables) ---------- */
+.btn-pill {
+    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 11px;
+    --bs-btn-font-size: 13px;
+    --bs-btn-font-weight: 500;
+    --bs-btn-border-radius: 40px;
+    --bs-btn-color: var(--navy-2);
+    --bs-btn-bg: var(--white);
+    --bs-btn-border-color: var(--navy-2);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-bg: var(--navy-2);
+    --bs-btn-hover-border-color: var(--navy-2);
+    --bs-btn-active-color: var(--white);
+    --bs-btn-active-bg: var(--navy-2);
+    --bs-btn-active-border-color: var(--navy-2);
+}
+
+/* ---------- Featured (highlighted) card, set by JS ---------- */
+.is-featured .prog-card {
+    border-color: var(--red);
+    box-shadow: 0 0 0 1px var(--red), 0 14px 28px -6px rgb(11 18 51 / .14);
+    transform: translateY(-2px);
+}
+
+.is-featured .btn-pill {
+    --bs-btn-color: var(--white);
+    --bs-btn-bg: var(--red);
+    --bs-btn-border-color: var(--red);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-bg: var(--red-dark);
+    --bs-btn-hover-border-color: var(--red-dark);
+    --bs-btn-active-color: var(--white);
+    --bs-btn-active-bg: var(--red-dark);
+    --bs-btn-active-border-color: var(--red-dark);
+}
+
+/* ---------- Notice bar ---------- */
+.programmes__notice {
+    padding: 14px 20px;
+    background: var(--cream);
+    border: 1px solid rgb(227 166 43 / .3);
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--navy-dark);
+}
+
+.programmes__notice-icon {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--red);
+    color: var(--white);
+    font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+    .programmes {
+        padding-block: 48px;
+    }
+
+    .programmes__title {
+        font-size: 28px;
+    }
+
+    .programmes__notice {
+        padding: 12px 14px;
+        gap: 12px !important;
+    }
+
+    .programmes__notice-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .prog-card,
+    .prog-arrow,
+    .is-featured .prog-card {
+        transition: none;
+        transform: none;
+    }
+}
+
+/* =========================================================
+   HOW ADMISSION WORKS  (existing :root variables only, px sizes)
+   Link after style.css, or paste at the bottom of it.
+   ========================================================= */
+.admission {
+    background: var(--blue-bg);
+    overflow: hidden;
+}
+
+/* ---------- Heading ---------- */
+.admission__title {
+    margin: 0;
+    font-size: 44px;
+    line-height: 1.2;
+    color: var(--navy-dark);
+}
+
+.admission__title span {
+    color: #8C93AD;
+}
+
+/* ---------- Arrows ---------- */
+.step-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: var(--navy-2);
+    color: var(--white);
+    font-size: 12px;
+    transition: background-color .25s, color .25s, transform .2s;
+}
+
+.step-arrow:hover:not(:disabled) {
+    background: var(--blue);
+    transform: translateY(-2px);
+}
+
+.step-arrow:focus-visible,
+.step-dot:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+}
+
+.step-arrow:disabled {
+    background: var(--white);
+    color: var(--gray-blue);
+    cursor: not-allowed;
+}
+
+.admission .admission__swiper {
+    margin-top: 56px;
+    overflow: hidden;
+}
+
+.admission .swiper-wrapper {
+    align-items: flex-end;
+}
+
+.admission .swiper-slide {
+    width: 400px;
+    height: auto;
+}
+
+/* ---------- Step card ---------- */
+.step-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    padding: 32px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background: #FFF;
+    box-shadow: 0 8px 24px 0 rgba(10, 46, 153, 0.08);
+    cursor: pointer;
+    transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-3px);
+}
+
+.admission .swiper-slide:nth-child(2) .step-card {
+    min-height: 220px;
+}
+
+.admission .swiper-slide:nth-child(3) .step-card {
+    min-height: 232px;
+}
+
+.admission .swiper-slide:nth-child(4) .step-card {
+    min-height: 244px;
+}
+
+.swiper-slide.is-active .step-card {
+    border-color: #D31430;
+    box-shadow: 0 0 0 1px var(--red), 0 14px 28px -8px rgb(11 18 51 / .12);
+}
+
+.step-card__title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--navy-dark);
+}
+
+.step-card__text {
+    margin: 0 0 20px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--gray-blue);
+}
+
+.step-card__num {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: var(--blue-bg);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--red);
+}
+
+/* ---------- Pagination (centered, no connecting line) ---------- */
+.admission__pager {
+    margin-top: 48px;
+}
+
+.step-dot {
+    width: 44px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--navy-2);
+    transition: background-color .3s, color .3s, transform .2s;
+}
+
+.step-dot:hover {
+    transform: translateY(-2px);
+}
+
+.step-dot.is-active {
+    background: var(--navy-2);
+    color: var(--white);
+}
+
+/* ---------- Note ---------- */
+.admission__note {
+    margin-top: 36px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--slate);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+    .admission .swiper-slide {
+        width: 300px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .admission .swiper-slide {
+        width: 264px;
+    }
+
+    .step-arrow {
+        width: 40px;
+        height: 36px;
+    }
+
+    .step-card {
+        min-height: 188px;
+        padding: 20px;
+    }
+
+    .admission .swiper-slide:nth-child(2) .step-card {
+        min-height: 198px;
+    }
+
+    .admission .swiper-slide:nth-child(3) .step-card {
+        min-height: 208px;
+    }
+
+    .admission .swiper-slide:nth-child(4) .step-card {
+        min-height: 218px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .step-card,
+    .step-arrow,
+    .step-dot {
+        transition: none;
+    }
+
+    .step-card:hover,
+    .step-dot:hover,
+    .step-arrow:hover:not(:disabled) {
+        transform: none;
+    }
+}
+
+/* =========================================================
+   WHY STUDENTS SHORTLIST THIS CAMPUS
+   (existing :root variables only, sizes in px)
+   Link after style.css, or paste at the bottom of it.
+   ========================================================= */
+.why {
+    background: var(--white);
+    overflow: hidden;
+}
+
+.why__title {
+    margin-bottom: 36px;
+    font-size: 44px;
+    color: var(--navy-dark);
+}
+
+.why__subtitle {
+    margin-bottom: 12px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--navy-dark);
+}
+
+.why__text {
+    max-width: 520px;
+    color: #4F5877;
+    font-size: 18px;
+}
+
+/* ---------- Campus image ---------- */
+.why__img {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px -12px rgb(11 18 51 / .25);
+}
+
+.why__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.why__img:hover img {
+    transform: scale(1.06);
+}
+
+/* ---------- Diagram image ---------- */
+.why__diagram {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+    .why__title span {
+        white-space: nowrap;
+    }
+
+    .why__img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (min-width: 1400px) {
+    .why__img {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .why__img img {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   8. FAQ ACCORDION SECTION
+   ========================================================= */
+.faq-section {
+    border-top: 1px solid #DCE3F3;
+    background: #F3F4FA;
+}
+
+.faq-title {
+    font-size: 44px;
+    color: #0B1233;
+
+}
+
+.faq-title__accent {
+    color: #D31430;
+}
+
+.faq-accordion {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: #0B1233;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.faq-item {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #0B1233;
+    border-radius: 0 !important;
+}
+
+.faq-button {
+    background-color: transparent !important;
+    color: #D31430 !important;
+    font-family: var(--font-sans);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 26px 0;
+    box-shadow: none !important;
+    transition: color 0.2s ease;
+}
+
+.faq-button.collapsed {
+    color: #0B1233 !important;
+}
+
+.faq-button.collapsed:hover {
+    color: #D31430 !important;
+}
+
+/* Replace Bootstrap chevron with clean '+' when collapsed and '–' when open */
+.faq-button::after {
+    content: "\2212";
+    background-image: none !important;
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    color: var(--slate);
+    transform: none !important;
+    transition: color 0.2s ease;
+}
+
+.faq-button.collapsed::after {
+    content: "+";
+    font-size: 18px;
+    color: var(--slate);
+}
+
+.faq-button.collapsed:hover::after {
+    color: var(--navy-dark);
+}
+
+.faq-body {
+    padding: 0 20px 20px 0;
+    font-size: 16px;
+    color: #4F5877;
+}
+
+/* =========================================================
+   6. FOOTER SECTION
+   ========================================================= */
+.site-footer {
+    background: linear-gradient(135deg, #141B5B 0%, #141B5B 71.43%);
+    gap: 56px;
+    padding: 88px 0 48px;
+    color: white;
+}
+
+.footer__logo {
+    font-size: 32px;
+    letter-spacing: -0.64px;
+    transition: opacity 0.2s ease;
+}
+
+.footer__logo:hover {
+    color: var(--footer-title-color);
+    opacity: 0.9;
+}
+
+.footer__company {
+    font-size: 18px;
+}
+
+.footer__details li,
+.footer__details a {
+    font-size: 16px;
+    color: #B9B2CF;
+    transition: color 0.2s ease;
+}
+
+.footer__details a:hover {
+    color: var(--footer-link-hover);
+}
+
+.footer__heading {
+    gap: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #FFD98A;
+}
+
+.footer__heading::before {
+    content: "";
+    width: 18px;
+    height: 1.5px;
+    background: var(--red);
+    flex-shrink: 0;
+}
+
+.footer__links a {
+    font-size: 18px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+    color: white;
+}
+
+.footer__links a:hover {
+    color: var(--footer-link-hover);
+    transform: translateX(4px);
+}
+
+.footer__divider {
+    border: 0;
+    border-top: 1px solid #FFFFFF24;
+    margin: 56px 0;
+    opacity: 1;
+}
+
+.footer__disclaimer-label {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #B9B2CF;
+}
+
+.footer__disclaimer-text {
+    font-size: 16px;
+    color: #B9B2CF;
+}
+
+.footer__disclaimer-text a:hover {
+    color: var(--footer-link-hover);
+}
+
+.footer__copyright {
+    font-size: 14px;
+    color: #B9B2CF;
+}
+
+/* Bottom-right diagonal wedge matching screenshot */
+.footer__wedge {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: clamp(140px, 16vw, 240px);
+    height: clamp(28px, 3.2vw, 44px);
+    background: var(--red);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    pointer-events: none;
 }
 
 @keyframes line-grow {
