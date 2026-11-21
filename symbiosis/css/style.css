@@ -76,7 +76,7 @@
     --hero-outline-hover-color: var(--navy-2);
 
     /* Background / Campus Image set via CSS variable */
-    --hero-bg-img: url("../image/Symbiosis/Campus_photo.webp");
+    --hero-bg-img: url("../images/Campus_photo.webp");
 
     /* ---------- Bootstrap overrides ---------- */
     --bs-primary: var(--color-primary);
@@ -225,20 +225,16 @@ a {
    ========================================================= */
 .hero {
     position: relative;
+    align-self: center;
     overflow: hidden;
-    background-color: var(--hero-panel-bg);
 }
 
-.hero__tint {
-    display: none;
-}
 
 .hero__panel {
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: var(--hero-panel-bg);
     background-image: var(--hero-overlay), var(--hero-bg-img);
     background-size: cover;
     background-position: center;
@@ -248,8 +244,11 @@ a {
 .hero__content {
     position: relative;
     z-index: 2;
-    max-width: 34rem;
-    padding: 3.5rem var(--gutter) 5.5rem;
+    width: 760px;
+    min-height: 85vh;
+    gap: 28px;
+    padding: 72px 72px 120px 72px;
+    background: var(--hero-panel-bg);
 }
 
 .eyebrow {

@@ -1,0 +1,330 @@
+:root {
+    --font-sans: "DM Sans", sans-serif;
+    --font-serif: "DM Serif Display", serif;
+
+    /* ---------- Brand palette (raw colors) ---------- */
+    --peach: #FFC79E;
+    --orange-light: #FF995C;
+    --orange: #F26B1F;
+    --orange-dark: #C85210;
+
+    --purple: #4B2C9C;
+    --purple-dark: #1C1433;
+    --purple-light: #D6CFE6;
+    --purple-gray: #6B6580;
+
+    --blue: #0A2E9A;
+    --navy: #07175B;
+    --navy-2: #141B5B;
+    --navy-dark: #0B1233;
+    --blue-light: #D5DCF5;
+    --blue-bg: #EEF2FC;
+
+    --slate: #4F5877;
+    --slate-dark: #3D4358;
+    --gray-blue: #8C93AD;
+
+    --gold: #E3A62B;
+    --gold-dark: #B7791F;
+
+    --red: #E8344E;
+    --red-dark: #C4223A;
+
+    --cream: #FFF9E8;
+    --off-white: #F3F4FA;
+    --white: #FFFFFF;
+
+    /* ---------- Semantic colors ---------- */
+    --color-primary: var(--blue);
+    --color-primary-dark: var(--navy);
+    --color-accent: var(--orange);
+    --color-accent-alt: var(--gold);
+    --color-text: var(--navy-dark);
+    --color-muted: var(--slate);
+    --color-border: var(--blue-light);
+    --color-bg-soft: var(--off-white);
+    --color-bg-cream: var(--cream);
+    --color-danger: var(--red);
+
+    /* ---------- Page / Hero Theme Variables (Default = Symbiosis) ---------- */
+    --topbar-bg: var(--navy-2);
+    --topbar-text: rgba(255, 255, 255, 0.85);
+    --topbar-dot: var(--red);
+
+    --header-bg: var(--white);
+    --header-link: var(--navy-dark);
+    --header-link-hover: var(--red);
+    --header-shadow: 0 0.25rem 1.25rem rgb(11 18 51 / 0.08);
+
+    --hero-panel-bg: var(--navy-2);
+    --hero-eyebrow-color: var(--red);
+    --hero-title-color: var(--white);
+    --hero-highlight-color: var(--red);
+    --hero-text-color: var(--blue-light);
+    --hero-wedge-bg: var(--red);
+    --hero-tint-opacity: 0.35;
+
+    --hero-overlay: linear-gradient(90deg,
+            rgba(20, 27, 91, 0.92) 0%,
+            rgba(20, 27, 91, 0.45) 50%,
+            rgba(20, 27, 91, 0.00) 100%);
+
+    --hero-btn-bg: var(--red);
+    --hero-btn-border: var(--red);
+    --hero-btn-hover-bg: var(--red-dark);
+    --hero-btn-hover-border: var(--red-dark);
+    --hero-outline-hover-color: var(--navy-2);
+
+    /* Background / Campus Image set via CSS variable */
+    --hero-bg-img: url("../image/Symbiosis/Campus_photo.webp");
+
+    /* ---------- Bootstrap overrides ---------- */
+    --bs-primary: var(--color-primary);
+    --bs-body-color: var(--color-text);
+    --bs-link-color: var(--color-primary);
+    --bs-link-hover-color: var(--color-accent);
+
+    /* ---------- Layout & Spacing ---------- */
+    --container-width: 1440px;
+    --section-space: 100px;
+    --gutter: 1rem;
+    --panel-left: max(var(--gutter), calc((100% - var(--container-width)) / 2 + var(--gutter)));
+    --split: calc(50% + 2rem);
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: var(--container-width);
+}
+
+.text-brand-highlight {
+    color: var(--hero-highlight-color);
+}
+
+/* =========================================================
+   3. BUTTONS
+   ========================================================= */
+.btn-brand {
+    --bs-btn-padding-x: 22px;
+    --bs-btn-padding-y: 12px;
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 600;
+    --bs-btn-border-radius: 0;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s, transform 0.2s;
+}
+
+.btn-brand:hover {
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    --bs-btn-color: var(--white);
+    --bs-btn-bg: var(--hero-btn-bg);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-bg: var(--hero-btn-hover-bg);
+    --bs-btn-active-color: var(--white);
+    --bs-btn-active-bg: var(--hero-btn-hover-bg);
+}
+
+.btn-navy {
+    --bs-btn-color: var(--white);
+    --bs-btn-bg: var(--navy-2);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-bg: var(--blue);
+    --bs-btn-active-color: var(--white);
+    --bs-btn-active-bg: var(--blue);
+}
+
+.hero .btn-outline-light {
+    --bs-btn-hover-color: var(--hero-outline-hover-color);
+}
+
+/* =========================================================
+   4. TOP BAR + HEADER
+   ========================================================= */
+.topbar {
+    background: var(--topbar-bg);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    line-height: 18px;
+    padding: 10px 0;
+}
+
+.topbar__dot {
+    width: 0.3rem;
+    height: 0.3rem;
+    background: var(--topbar-dot);
+    vertical-align: middle;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.site-header.is-scrolled {
+    box-shadow: var(--header-shadow);
+}
+
+.brand img {
+    height: 44px;
+    width: auto;
+}
+
+.header-end {
+    gap: 32px
+}
+
+.back-link {
+    color: var(--header-link);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--header-link-hover);
+}
+
+.back-link i {
+    transition: transform 0.2s;
+}
+
+.back-link:hover i {
+    transform: translateX(-3px);
+}
+
+/* =========================================================
+5. HERO SECTION (BG Image + Gradient Overlay + Wedge)
+   ========================================================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    background-color: var(--hero-panel-bg);
+}
+
+
+.hero__panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 72px 72px 120px 72px;
+    background-color: var(--hero-panel-bg);
+    background-image: var(--hero-overlay), var(--hero-bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 34rem;
+    padding: 3.5rem var(--gutter) 5.5rem;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hero-eyebrow-color);
+}
+
+.eyebrow::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5px;
+    background: currentColor;
+    flex-shrink: 0;
+    transform-origin: left;
+    animation: line-grow 0.8s 0.35s ease-out both;
+}
+
+.hero__title {
+    font-size: clamp(2.15rem, 1.5rem + 2.2vw, 3.1rem);
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
+    color: var(--hero-title-color);
+}
+
+.hero__text {
+    max-width: 29rem;
+    margin-bottom: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--hero-text-color);
+}
+
+/* Diagonal accent wedge at bottom of content panel */
+.hero__wedge {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 3;
+    height: clamp(2.25rem, 4vw, 3.5rem);
+    background: var(--hero-wedge-bg);
+    clip-path: polygon(0 100%, 100% 25%, 100% 100%);
+    pointer-events: none;
+}
+
+/* Right side campus photo */
+.hero__media {
+    min-height: 18rem;
+    background-color: var(--hero-panel-bg);
+    background-image: var(--hero-bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes line-grow {
+    from {
+        transform: scaleX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .eyebrow::before {
+        animation: none;
+    }
+
+    .btn-brand:hover {
+        transform: none;
+    }
+}
