@@ -1,0 +1,126 @@
+/* =========================================================
+   Catalyst AI - Scroll animations (animation.css)
+   Load AFTER css/style.css
+
+   How it stays safe:
+   - Uses the individual `translate` / `scale` properties, so it never
+     clashes with existing `transform` hovers (cards, buttons, commit items).
+   - Uses keyframe animations (not transitions), so existing `transition`
+     rules on those elements are untouched.
+   - JS removes every animation class once the animation ends, so each
+     element goes back to its exact original CSS.
+   - Classes are added by JS only: no JS = page fully visible.
+   ========================================================= */
+
+:root {
+  --anim-duration: 0.9s;
+  --anim-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ---------- Hidden state (before the element enters the viewport) ---------- */
+.anim {
+  opacity: 0;
+}
+
+/* ---------- Revealed state ---------- */
+.anim.is-inview {
+  opacity: 1;
+  animation-duration: var(--anim-duration);
+  animation-timing-function: var(--anim-ease);
+  animation-delay: var(--anim-delay, 0ms);
+  animation-fill-mode: backwards; /* holds the "from" frame during the delay */
+}
+
+.anim--fade-up.is-inview {
+  animation-name: anim-fade-up;
+}
+.anim--fade-up-sm.is-inview {
+  animation-name: anim-fade-up-sm;
+  animation-duration: 0.7s;
+}
+.anim--fade-in.is-inview {
+  animation-name: anim-fade-in;
+}
+.anim--scale-in.is-inview {
+  animation-name: anim-scale-in;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes anim-fade-up {
+  from {
+    opacity: 0;
+    translate: 0 32px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes anim-fade-up-sm {
+  from {
+    opacity: 0;
+    translate: 0 16px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes anim-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes anim-scale-in {
+  from {
+    opacity: 0;
+    scale: 0.96;
+    translate: 0 20px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+/* ---------- Scroll progress bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  height: 3px;
+  background: var(--orange, #f26b1f);
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ---------- Reduced motion: show everything, no motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .anim,
+  .anim.is-inview {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  .scroll-progress {
+    display: none;
+  }
+}
+
+/* ---------- Print: never hide content ---------- */
+@media print {
+  .anim {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  .scroll-progress {
+    display: none;
+  }
+}
